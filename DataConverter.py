@@ -6,7 +6,7 @@ import numpy as np
 import cv2
 import matplotlib.pyplot as plt
 
-output_time = 16
+output_time = 20
 max_repetitions = 8 #lowered if clips cannot fit into this time
 
 def create_augmented_wav(file, output_time, max_repetitions):
@@ -25,8 +25,7 @@ def create_augmented_wav(file, output_time, max_repetitions):
     #Decide rep number and resulting zeroes length to total desired output time
     max_repetitions = min(round(target_samples//file_samples), max_repetitions)
     num_repetitions = random.randint(0,max_repetitions)
-    num_repetitions = max_repetitions
-    print(num_repetitions, "repetitions")
+    # num_repetitions = max_repetitions
     zeroes_samples = target_samples - num_repetitions*file_samples
 
     #Randomly split zeroes lengths around repetitions
@@ -36,6 +35,46 @@ def create_augmented_wav(file, output_time, max_repetitions):
     for j in range(num_repetitions):
         zeroes_lengths.append(points[j+1]-points[j])
 
+    if num_repetitions > 0:
+        # Random start and end padding (~10% mean each)
+        start_padding = min(max(0, int(random.gauss(zeroes_samples*0.1, zeroes_samples*0.05))), zeroes_samples*0.5)
+        end_padding = min(max(0, int(random.gauss(zeroes_samples*0.1, zeroes_samples*0.05))), zeroes_samples*0.5)
+
+        remaining_zeroes = zeroes_samples - start_padding - end_padding
+
+        zeroes_lengths = [start_padding]
+        if num_repetitions == 1:
+            end_padding += remaining_zeroes  # all leftover goes after the single repetition
+        else:
+            # Distribute remaining_zeroes approximately evenly between repetitions
+            base_gap = remaining_zeroes // (num_repetitions - 1)
+            extra = remaining_zeroes % (num_repetitions - 1)
+
+            for i in range(num_repetitions - 1):
+                gap = base_gap
+                if i < extra:
+                    gap += 1  # distribute leftover
+                # small random perturbation around gap
+                perturb = int(random.gauss(0, remaining_zeroes*0.01))
+                perturb = max(-gap, min(perturb, remaining_zeroes))  # keep valid
+                zeroes_lengths.append(gap + perturb)
+            
+            # Adjust zeroes_lengths to sum exactly remaining_zeroes
+            diff = remaining_zeroes - sum(zeroes_lengths)
+            end_padding += diff 
+            if end_padding < 0:
+                zeroes_lengths[0] += end_padding
+            if zeroes_lengths[0] < 0:
+                zeroes_lengths[-1] += zeroes_lengths[0]
+                zeroes_lengths[0] = 0
+            #else:
+            #    god help you
+                
+    else:
+        start_padding = 0
+        end_padding = zeroes_samples
+        zeroes_lengths = []
+
     output = torch.zeros(y.shape[0], target_samples)
     ptr = 0
     for i in range(num_repetitions):
@@ -43,7 +82,7 @@ def create_augmented_wav(file, output_time, max_repetitions):
         output[:, ptr:ptr+file_samples] = y
         ptr += file_samples
 
-    return output, sample_rate
+    return output, sample_rate, num_repetitions
 
 def create_spectrogram_npy(y, sr, out_npy_path, nperseg=512, noverlap=353) -> None:
     y = y + torch.empty_like(y).uniform_(-0.01,0.01)
@@ -107,6 +146,7 @@ def visualize_npy(npy_path, out_png, cmap="magma"):
 # print(y.shape, sr, y.abs().max())
 # create_spectrogram(y, sr)
 
-y, sr = create_augmented_wav("drop.wav", output_time, max_repetitions)
+y, sr, num_repetitions = create_augmented_wav("drop.wav", output_time, max_repetitions)
+print("num_repetitions =", num_repetitions)
 create_spectrogram_npy(y, sr, "drop_spec.npy")
 visualize_npy("drop_spec.npy", "drop_spec_viz.png")
