@@ -23,19 +23,25 @@ def audio_count_histogram(folder):
     audio_counts = []
 
     for file in os.listdir(folder):
-        if file.endswith(".wav"):
+        if file.endswith(".npy"):
             reps = file.split("_")[-1].split(".")[0]
             audio_counts.append(int(reps))
 
     plt.hist(audio_counts, bins=range(min(audio_counts), max(audio_counts) + 2), edgecolor='black', align='left')
     plt.xlabel("Audio Repetitions in File")
     plt.ylabel("Count")
-    plt.title("Histogram of Audio Repetitions")
-    plt.show()
+    plt.savefig("output.png", dpi=150, bbox_inches='tight', pad_inches=0)
+    plt.close()
 
 # dir = "DataConverter_input"
 # files = file_length_histogram(dir)
 
-dir = "/scratch/local/ssd/hani/musan/noise/free-sound"
-dir = "/scratch/local/ssd/hani/musan/noise/sound-bible"
-file_length_histogram(dir)
+# dir = "/scratch/local/ssd/hani/musan/noise/free-sound"
+# dir = "/scratch/local/ssd/hani/musan/noise/sound-bible"
+# file_length_histogram(dir)
+
+# dir = "/scratch/local/ssd/hani/spec/train/"
+# audio_count_histogram(dir)
+
+dir = "/scratch/local/ssd/hani/spec/test/"
+audio_count_histogram(dir)
