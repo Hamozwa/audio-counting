@@ -141,12 +141,17 @@ def visualize_npy(npy_path, out_png, cmap="magma"):
     plt.savefig(out_png, dpi=150, bbox_inches='tight', pad_inches=0)
     plt.close()
 
-
-# y, sr = create_augmented_wav("drop.wav", output_time, max_repetitions)
-# print(y.shape, sr, y.abs().max())
-# create_spectrogram(y, sr)
+def batch_create_spectrogram_samples(input_folder, output_folder, output_time, max_repetitions):
+    import os
+    for file in os.listdir(input_folder):
+        if not file.endswith(".wav"):
+            continue
+        filepath = os.path.join(input_folder, file)
+        y, sr, num_repetitions = create_augmented_wav(filepath, output_time, max_repetitions)
+        base_name = os.path.splitext(file)[0]
+        npy_path = os.path.join(output_folder, base_name + "_spec_" + str(num_repetitions) + ".npy")
+        create_spectrogram_npy(y, sr, npy_path)
 
 y, sr, num_repetitions = create_augmented_wav("drop.wav", output_time, max_repetitions)
-print("num_repetitions =", num_repetitions)
-create_spectrogram_npy(y, sr, "drop_spec.npy")
-visualize_npy("drop_spec.npy", "drop_spec_viz.png")
+create_spectrogram_npy(y, sr, "drop_spec_" + str(num_repetitions) + ".npy")
+visualize_npy("drop_spec_" + str(num_repetitions) + ".npy", "drop_spec_viz.png")
