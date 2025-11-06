@@ -84,6 +84,76 @@ def create_augmented_wav(file, output_time, max_repetitions):
 
     return output, sample_rate, num_repetitions
 
+def add_musan_noise(y, sr, snr_db_range=(0,10), debug_wav=False):
+    import os
+    folder = "/scratch/local/ssd/hani/musan/noise/"
+
+    # collect equally from either of the subfolders
+    search_dirs = [os.path.join(folder, 'sound-bible'), os.path.join(folder, 'free-sound')]
+    wav_files = []
+    for d in search_dirs:
+        if not os.path.isdir(d):
+            continue
+        for root, _, files in os.walk(d):
+            for f in files:
+                if f.lower().endswith('.wav'):
+                    wav_files.append(os.path.join(root, f))
+
+    noise_file = random.choice(wav_files)
+    noise_y, noise_sr = torchaudio.load(noise_file, normalize=True)
+
+    # Resample noise if needed
+    if noise_sr != sr:
+        resampler = torchaudio.transforms.Resample(noise_sr, sr)
+        noise_y = resampler(noise_y)
+        noise_sr = sr
+
+    # Ensure noise covers the length of y. If shorter, tile/repeat; if longer,
+    # randomly pick a segment of appropriate length so mixing is varied.
+    target_len = y.shape[1]
+    n_channels_target = y.shape[0]
+    noise_len = noise_y.shape[1]
+
+    if noise_len < target_len:
+        repeats = (target_len // noise_len) + 1 #TODO: change to place noise once somewhere in the file
+        noise_y = noise_y.repeat(1, repeats)[:, :target_len]
+    else:
+        start = random.randint(0, noise_len - target_len)
+        noise_y = noise_y[:, start:start + target_len]
+
+    # Match channels
+    if noise_y.shape[0] != n_channels_target:
+        if noise_y.shape[0] == 1 and n_channels_target > 1:
+            noise_y = noise_y.repeat(n_channels_target, 1)
+        else:
+            mono = noise_y.mean(dim=0, keepdim=True)
+            noise_y = mono.repeat(n_channels_target, 1)
+
+    # Choose random SNR in dB and scale noise accordingly
+    snr_db = random.uniform(snr_db_range[0], snr_db_range[1])
+    print("Chosen SNR (dB):", snr_db)
+
+    sig_rms = torch.sqrt(torch.mean(y ** 2))
+    noise_rms = torch.sqrt(torch.mean(noise_y ** 2))
+    if noise_rms == 0 or sig_rms == 0:
+        # Nothing to mix or silent target — return original
+        return y
+
+    desired_noise_rms = sig_rms / (10 ** (snr_db / 20.0))
+    scale = desired_noise_rms / (noise_rms + 1e-9)
+    noise_y = noise_y * scale
+
+    mixed = y + noise_y
+    # Keep values in valid range
+    mixed = torch.clamp(mixed, -1.0, 1.0)
+
+    if debug_wav:
+        torchaudio.save("debug_original.wav", y, sr)
+        torchaudio.save("debug_noise.wav", noise_y, sr)
+        torchaudio.save("debug_mixed.wav", mixed, sr)
+
+    return mixed
+
 def create_spectrogram_npy(y, sr, out_npy_path, nperseg=512, noverlap=353) -> None:
     y = y + torch.empty_like(y).uniform_(-0.01,0.01)
 
@@ -153,5 +223,6 @@ def batch_create_spectrogram_samples(input_folder, output_folder, output_time, m
         create_spectrogram_npy(y, sr, npy_path)
 
 y, sr, num_repetitions = create_augmented_wav("drop.wav", output_time, max_repetitions)
+y = add_musan_noise(y, sr, snr_db_range=(0,10), debug_wav=True)
 create_spectrogram_npy(y, sr, "drop_spec_" + str(num_repetitions) + ".npy")
 visualize_npy("drop_spec_" + str(num_repetitions) + ".npy", "drop_spec_viz.png")

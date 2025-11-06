@@ -16,7 +16,8 @@ def file_length_histogram(folder):
     plt.xlabel("Duration (seconds)")
     plt.ylabel("Number of files")
     plt.title("WAV File Duration Histogram")
-    plt.show()
+    plt.savefig("output.png", dpi=150, bbox_inches='tight', pad_inches=0)
+    plt.close()
 
 def audio_count_histogram(folder):
     audio_counts = []
@@ -35,5 +36,6 @@ def audio_count_histogram(folder):
 # dir = "DataConverter_input"
 # files = file_length_histogram(dir)
 
-dir = "DataConverter_output"
-audio_count_histogram(dir)
+dir = "/scratch/local/ssd/hani/musan/noise/free-sound"
+dir = "/scratch/local/ssd/hani/musan/noise/sound-bible"
+file_length_histogram(dir)
