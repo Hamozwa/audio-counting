@@ -185,6 +185,8 @@ class DataConverter:
         # noise = np.random.uniform(-0.05,0.05, spectrogram.shape)
         # spectrogram = spectrogram + noise
 
+        print(spectrogram.shape)
+
         spectrogram = cv2.resize(spectrogram, (224, 224))
 
         # save spectrogram as float32
