@@ -9,10 +9,11 @@ import cv2
 import matplotlib.pyplot as plt
 
 class DataConverter:
-    def __init__(self, input_time=2, output_time=20, max_repetitions=8):
+    def __init__(self, input_time=2, output_time=20, max_repetitions=8, resample_rate=16000):
         self.input_time = input_time # maximum input audio length in seconds
         self.output_time = output_time
         self.max_repetitions = max_repetitions
+        self.resample_rate = resample_rate
 
         # Pre-scan MUSAN noise directories
         folder = "/scratch/local/ssd/hani/musan/noise/"
@@ -30,12 +31,18 @@ class DataConverter:
         if not self.musan_wav_files:
             print(f"Warning: no MUSAN .wav files found in {search_dirs}")
 
-    def create_augmented_wav(self, file, output_time, max_repetitions):
+    def create_augmented_wav(self, file, output_time, max_repetitions, forced_repetitions=None):
         #ignore non-wav files
         if not file.endswith(".wav"):
             return
 
         y, sample_rate = torchaudio.load(file, normalize=True)
+
+        #resample
+        y = torchaudio.transforms.Resample(orig_freq=sample_rate, new_freq=self.resample_rate)(y)
+        sample_rate = self.resample_rate
+
+
         file_samples = y.shape[1]
         target_samples = output_time * sample_rate
 
@@ -45,8 +52,12 @@ class DataConverter:
 
         #Decide rep number and resulting zeroes length to total desired output time
         max_repetitions = min(round(target_samples//file_samples), max_repetitions)
-        num_repetitions = random.randint(0,max_repetitions)
-        # num_repetitions = max_repetitions
+
+        if forced_repetitions is not None:
+            num_repetitions = forced_repetitions
+        else:
+            num_repetitions = random.randint(0,max_repetitions)
+
         zeroes_samples = target_samples - num_repetitions*file_samples
 
         #Randomly split zeroes lengths around repetitions
@@ -170,14 +181,45 @@ class DataConverter:
 
         return mixed
 
-    def create_spectrogram_npy(self, y, sr, out_npy_path, nperseg=512, noverlap=353):
-        y = y + torch.empty_like(y).uniform_(-0.01,0.01)
+    def apply_histogram_equalisation(self, spectrogram, method='clahe', clipLimit=8.0, tileGridSize=(4,4)):
+        if method is None:
+            return spectrogram
+
+        # preserve original min/max so we can map back after equalisation
+        orig_min = float(np.min(spectrogram))
+        orig_max = float(np.max(spectrogram))
+        if orig_max - orig_min < 1e-9:
+            return spectrogram
+
+        # scale to 0-255
+        scaled = (spectrogram - orig_min) / (orig_max - orig_min)
+        scaled = np.clip(scaled * 255.0, 0, 255).astype(np.uint8)
+
+        if method == 'global':
+            eq = cv2.equalizeHist(scaled)
+        elif method == 'clahe':
+            clahe = cv2.createCLAHE(clipLimit=clipLimit, tileGridSize=tileGridSize)
+            eq = clahe.apply(scaled)
+        else:
+            return spectrogram
+
+        # map back to original float range
+        eq_f = eq.astype(np.float32) / 255.0
+        eq_f = eq_f * (orig_max - orig_min) + orig_min
+        return eq_f
+
+    def create_spectrogram_npy(self, y, sr, out_npy_path, nperseg=512, noverlap=256, hist_eq=None):
+        #y = y + torch.empty_like(y).uniform_(-0.01,0.01)
 
         waveform = y.mean(dim=0).cpu().numpy()
         _, _, spectrogram = signal.spectrogram(waveform, sr, nperseg=nperseg, noverlap=noverlap)
         spectrogram = np.log(spectrogram + 1e-7)
 
-        #normalise
+        # apply histogram equalization
+        if hist_eq is not None:
+            spectrogram = self.apply_histogram_equalisation(spectrogram, method=hist_eq)
+
+        # normalise to zero mean and unit variance
         mean = np.mean(spectrogram)
         std = np.std(spectrogram)
         spectrogram = np.divide(spectrogram - mean, std + 1e-9)
@@ -229,7 +271,7 @@ class DataConverter:
         plt.savefig(out_png, dpi=150, bbox_inches='tight', pad_inches=0)
         plt.close()
 
-    def batch_create_spectrogram_samples(self, input_folder, output_folder):
+    def batch_create_spectrogram_samples(self, input_folder, output_folder, add_noise=True, hist_eq=None):
         # simple progress counter
         all_files = os.listdir(input_folder)
         total_wavs = sum(1 for f in all_files if f.lower().endswith('.wav'))
@@ -257,14 +299,21 @@ class DataConverter:
                 continue
 
             y, sr, num_repetitions = self.create_augmented_wav(filepath, self.output_time, self.max_repetitions)
-            y = self.add_musan_noise(y, sr, snr_db_range=(0,10), debug_wav=False)
+            if add_noise:
+                y = self.add_musan_noise(y, sr, snr_db_range=(0,10), debug_wav=False)
             base_name = os.path.splitext(file)[0]
             npy_path = os.path.join(output_folder, base_name + "_spec_" + str(num_repetitions) + ".npy")
-            self.create_spectrogram_npy(y, sr, npy_path)
+            self.create_spectrogram_npy(y, sr, npy_path, hist_eq=hist_eq)
 
 if __name__ == '__main__':
     converter = DataConverter()
-    y, sr, num_repetitions = converter.create_augmented_wav("drop.wav", converter.output_time, converter.max_repetitions)
-    y = converter.add_musan_noise(y, sr, snr_db_range=(0,10), debug_wav=True)
-    converter.create_spectrogram_npy(y, sr, "drop_spec_" + str(num_repetitions) + ".npy")
-    converter.visualize_npy("drop_spec_" + str(num_repetitions) + ".npy", "drop_spec_viz.png")
+    y, sr, num_repetitions = converter.create_augmented_wav("Preprocessing/drop.wav", converter.output_time, converter.max_repetitions, forced_repetitions=8)
+    #y = converter.add_musan_noise(y, sr, snr_db_range=(0,10), debug_wav=False)
+    converter.create_spectrogram_npy(y, sr, "drop_spec_" + str(num_repetitions) + ".npy", hist_eq='global')
+    converter.visualize_npy("drop_spec_" + str(num_repetitions) + ".npy", "drop_spec_global.png")
+
+    converter.create_spectrogram_npy(y, sr, "drop_spec_" + str(num_repetitions) + ".npy", hist_eq='clahe')
+    converter.visualize_npy("drop_spec_" + str(num_repetitions) + ".npy", "drop_spec_clahe.png")
+
+    converter.create_spectrogram_npy(y, sr, "drop_spec_" + str(num_repetitions) + ".npy", hist_eq=None)
+    converter.visualize_npy("drop_spec_" + str(num_repetitions) + ".npy", "drop_spec_nohist.png")
