@@ -16,7 +16,7 @@ class DataConverter:
 
     """
 
-    def __init__(self, input_time=1.0, output_time=20, max_repetitions=8, resample_rate=16000):
+    def __init__(self, input_time=1.0, output_time=10, max_repetitions=8, resample_rate=16000):
         """init method"""
 
         self.input_time = input_time # maximum input audio length in seconds
@@ -79,9 +79,9 @@ class DataConverter:
             zeroes_lengths.append(points[j+1]-points[j])
 
         if num_repetitions > 0:
-            # Random start and end padding (~10% mean each)
-            start_padding = min(max(0, int(random.gauss(zeroes_samples*0.1, zeroes_samples*0.05))), zeroes_samples*0.5)
-            end_padding = min(max(0, int(random.gauss(zeroes_samples*0.1, zeroes_samples*0.05))), zeroes_samples*0.5)
+            # Random start and end padding
+            start_padding = min(max(0, int(random.gauss(zeroes_samples*0.25, zeroes_samples*0.09))), zeroes_samples*0.5)
+            end_padding = min(max(0, int(random.gauss(zeroes_samples*0.25, zeroes_samples*0.09))), zeroes_samples*0.5)
 
             remaining_zeroes = zeroes_samples - start_padding - end_padding
 
@@ -407,17 +407,6 @@ class DataConverter:
                 print(f"Processed {counter}/{total_wavs} files...")
 
             filepath = os.path.join(input_folder, file)
-            # skip files longer than 2 seconds
-            try:
-                info = torchaudio.info(filepath)
-                duration = info.num_frames / info.sample_rate
-            except Exception:
-                # fall back to loading if info() not available
-                tmp_y, tmp_sr = torchaudio.load(filepath, normalize=True)
-                duration = tmp_y.shape[1] / tmp_sr
-
-            if duration > self.input_time:
-                continue
 
             for j in range(0, use_per_file):
                 y, sr, num_repetitions = self.create_augmented_wav(filepath, self.output_time, self.max_repetitions)
@@ -429,61 +418,52 @@ class DataConverter:
         """Extract peak volume moment from audio file"""
 
         x, sr = torchaudio.load(path)
-        x = x.mean(dim=0).numpy()
-        N = len(x)
 
-        #find peak index
+        if x.shape[0] > 1:
+            x = x.mean(dim=0, keepdim=True)
+
+        N = x.shape[1]
+
         time_window = random.uniform(0.1, max_time_window)
         window_len = int(sr * time_window)
-        peak_idx = np.argmax(np.abs(x))
 
-        #randomly position window around peak
+        peak_idx = torch.argmax(torch.abs(x))
         peak_position = random.randint(0, window_len - 1)
+
         start = peak_idx - peak_position
         end = start + window_len
 
+        #keep in audio bound
         if start < 0:
             start = 0
             end = window_len
 
         if end > N:
             end = N
-            start = end - window_len
+            start = max(0, end - window_len)
 
-        segment = x[start:end]
+        segment = x[:, start:end]
 
-        #pad as needed
-        if len(segment) < window_len:
+        # Pad if needed (file shorter than 1s or window clipped)
+        if segment.shape[1] < window_len:
             pad_left = 0
             pad_right = 0
-
             if start == 0:
-                pad_left = window_len - len(segment)
+                pad_left = 0
+                pad_right = window_len - segment.shape[1]
             elif end == N:
-                pad_right = window_len - len(segment)
-
-            segment = np.pad(segment, (pad_left, pad_right))
-
+                pad_left = window_len - segment.shape[1]
+                pad_right = 0
+            segment = torch.nn.functional.pad(segment, (pad_left, pad_right))
         return segment, sr
 
 if __name__ == '__main__':
     converter = DataConverter()
     
-    #get max 2 second audio from FSD50K dev set
-    duration = 3.0
-    while duration > 2.0:
-        choice = random.choice(os.listdir("/scratch/local/ssd/hani/FSD50K/train/"))
-        filepath = os.path.join("/scratch/local/ssd/hani/FSD50K/train/", choice)
-        try:
-            info = torchaudio.info(filepath)
-            duration = info.num_frames / info.sample_rate
-        except Exception:
-            # fall back to loading if info() not available
-            tmp_y, tmp_sr = torchaudio.load(filepath, normalize=True)
-            duration = tmp_y.shape[1] / tmp_sr
-        print("Chosen file:", choice, " Duration:", duration)
+    choice = random.choice(os.listdir("/scratch/local/ssd/hani/FSD50K/train/"))
+    filepath = os.path.join("/scratch/local/ssd/hani/FSD50K/train/", choice)
 
-    y, sr, num_repetitions = converter.create_augmented_wav(filepath, converter.output_time, converter.max_repetitions, forced_repetitions=5)
+    y, sr, num_repetitions = converter.create_augmented_wav(filepath, converter.output_time, converter.max_repetitions)
     print("Repetitions:", num_repetitions)
     converter.create_spectrogram_npy(y, sr, "drop_spec_" + str(num_repetitions) + ".npy", hist_eq="global", add_noise=True)
     converter.visualize_npy("drop_spec_" + str(num_repetitions) + ".npy", "drop_spec_global.png")
