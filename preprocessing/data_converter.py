@@ -9,7 +9,16 @@ import cv2
 import matplotlib.pyplot as plt
 
 class DataConverter:
+
+    """
+    
+    Class for converting audio files into augmented spectrogram samples for training/testing
+
+    """
+
     def __init__(self, input_time=2, output_time=20, max_repetitions=8, resample_rate=16000):
+        """init method"""
+
         self.input_time = input_time # maximum input audio length in seconds
         self.output_time = output_time
         self.max_repetitions = max_repetitions
@@ -32,9 +41,11 @@ class DataConverter:
             print(f"Warning: no MUSAN .wav files found in {search_dirs}")
 
     def create_augmented_wav(self, file, output_time, max_repetitions, forced_repetitions=None):
+        """Create an augmented waveform from an input file."""
+
         #ignore non-wav files
         if not file.endswith(".wav"):
-            return
+            return None, None, 0
 
         y, sample_rate = torchaudio.load(file, normalize=True)
 
@@ -48,7 +59,7 @@ class DataConverter:
 
         if file_samples > target_samples:
             print(file + " is too long")
-            return
+            return None, None, 0
 
         #Decide rep number and resulting zeroes length to total desired output time
         max_repetitions = min(round(target_samples//file_samples), max_repetitions)
@@ -116,8 +127,14 @@ class DataConverter:
 
         return output, sample_rate, num_repetitions
 
-    def add_musan_noise(self, y, sr, snr_db_range=(0,10), debug_wav=False):
-        noise_file = random.choice(self.musan_wav_files)
+    def add_musan_noise(self, y, sr, snr_db_range=(23,30), debug_wav=False, forced_noise_file=None):
+        """Add MUSAN noise to waveform y."""
+        
+        if forced_noise_file is not None:
+            noise_file = forced_noise_file
+        else:
+            noise_file = random.choice(self.musan_wav_files)
+        print(f"Adding noise from: {noise_file}")
         noise_y, noise_sr = torchaudio.load(noise_file, normalize=True)
 
         # Resample noise if needed
@@ -132,10 +149,15 @@ class DataConverter:
         n_channels_target = y.shape[0]
         noise_len = noise_y.shape[1]
 
+        # Keep original (unpadded) noise segment for correct RMS calculation
+        orig_noise_segment = None
+
         if noise_len < target_len:
             # Place the noise once at a random location inside the target length
             noise_stream = torch.zeros(n_channels_target, target_len)
             insert_start = random.randint(0, target_len - noise_len)
+            # save unpadded original for RMS calc
+            orig_noise_segment = noise_y.clone()
             # If noise has single channel, duplicate into all target channels
             if noise_y.shape[0] == n_channels_target:
                 noise_stream[:, insert_start:insert_start + noise_len] = noise_y
@@ -159,9 +181,28 @@ class DataConverter:
 
         # Choose random SNR in dB and scale noise accordingly
         snr_db = random.uniform(snr_db_range[0], snr_db_range[1])
+        print(f"Chosen SNR (dB): {snr_db}")
 
-        sig_rms = torch.sqrt(torch.mean(y ** 2))
-        noise_rms = torch.sqrt(torch.mean(noise_y ** 2))
+        # Compute signal RMS on active (non-silent) frames to avoid silent-padding bias
+        activity = y.abs().mean(dim=0)
+        silence_thresh = 1e-4
+        active_mask = activity > silence_thresh
+        if active_mask.any():
+            sig_rms = torch.sqrt(torch.mean(y[:, active_mask] ** 2))
+        else:
+            sig_rms = torch.sqrt(torch.mean(y ** 2))
+
+        # Compute noise RMS from the original unpadded noise segment if available
+        if orig_noise_segment is not None:
+            if orig_noise_segment.shape[0] == 1 and n_channels_target > 1:
+                orig_noise_segment = orig_noise_segment.repeat(n_channels_target, 1)
+            elif orig_noise_segment.shape[0] != n_channels_target:
+                mono = orig_noise_segment.mean(dim=0, keepdim=True)
+                orig_noise_segment = mono.repeat(n_channels_target, 1) 
+
+            noise_rms = torch.sqrt(torch.mean(orig_noise_segment ** 2))
+        else:
+            noise_rms = torch.sqrt(torch.mean(noise_y ** 2))
         if noise_rms == 0 or sig_rms == 0:
             # Nothing to mix or silent target — return original
             return y
@@ -180,6 +221,56 @@ class DataConverter:
             torchaudio.save("debug_mixed.wav", mixed, sr)
 
         return mixed
+
+    def musan_noise_spectrogram(self, target_shape, sr, nperseg=512, noverlap=256, forced_noise_file=None):
+        """ Return a MUSAN noise power-spectrogram shaped (freq_bins, time_frames) """
+        num_bins, num_frames = target_shape
+        hop = nperseg - noverlap
+        required_samples = int((max(1, num_frames - 1) * hop) + nperseg)
+
+        # pick noise file
+        if forced_noise_file is not None:
+            noise_file = forced_noise_file
+        else:
+            noise_file = random.choice(self.musan_wav_files)
+        noise_y, noise_sr = torchaudio.load(noise_file, normalize=True)
+
+        # resample if needed
+        if noise_sr != sr:
+            resampler = torchaudio.transforms.Resample(noise_sr, sr)
+            noise_y = resampler(noise_y)
+            noise_sr = sr
+
+        # convert to mono waveform numpy
+        noise_wave = noise_y.mean(dim=0).cpu().numpy()
+        noise_len = noise_wave.shape[0]
+
+        # if too short: repeat it until long enough (simple and deterministic)
+        if noise_len < required_samples:
+            reps = int(np.ceil(required_samples / float(noise_len)))
+            noise_wave = np.tile(noise_wave, reps)[:required_samples]
+        else:
+            start = random.randint(0, noise_len - required_samples)
+            noise_wave = noise_wave[start:start + required_samples]
+
+        # compute power spectrogram with same STFT params
+        _, _, Sxx = signal.spectrogram(noise_wave, sr, nperseg=nperseg, noverlap=noverlap)
+        # Sxx is power; crop/pad time dimension to match num_frames
+        if Sxx.shape[1] >= num_frames:
+            Sxx = Sxx[:, :num_frames]
+        else:
+            # pad with small epsilon columns if unexpectedly short
+            pad_cols = num_frames - Sxx.shape[1]
+            Sxx = np.concatenate([Sxx, np.zeros((Sxx.shape[0], pad_cols), dtype=Sxx.dtype)], axis=1)
+
+        # Ensure freq bins match — if not, crop or pad (rare if same nperseg used)
+        if Sxx.shape[0] > num_bins:
+            Sxx = Sxx[:num_bins, :]
+        elif Sxx.shape[0] < num_bins:
+            pad_rows = num_bins - Sxx.shape[0]
+            Sxx = np.concatenate([Sxx, np.zeros((pad_rows, Sxx.shape[1]), dtype=Sxx.dtype)], axis=0)
+
+        return Sxx  # power spectrogram (freq x time)
 
     def apply_histogram_equalisation(self, spectrogram, method='clahe', clipLimit=8.0, tileGridSize=(4,4)):
         if method is None:
@@ -208,9 +299,7 @@ class DataConverter:
         eq_f = eq_f * (orig_max - orig_min) + orig_min
         return eq_f
 
-    def create_spectrogram_npy(self, y, sr, out_npy_path, nperseg=512, noverlap=256, hist_eq=None):
-        #y = y + torch.empty_like(y).uniform_(-0.01,0.01)
-
+    def create_spectrogram_npy(self, y, sr, out_npy_path = None, nperseg=512, noverlap=256, hist_eq=None, add_noise=False):
         waveform = y.mean(dim=0).cpu().numpy()
         _, _, spectrogram = signal.spectrogram(waveform, sr, nperseg=nperseg, noverlap=noverlap)
         spectrogram = np.log(spectrogram + 1e-7)
@@ -219,20 +308,47 @@ class DataConverter:
         if hist_eq is not None:
             spectrogram = self.apply_histogram_equalisation(spectrogram, method=hist_eq)
 
+        if add_noise:
+            # spectrogram currently holds log(power + eps)
+            spec_power = np.exp(spectrogram) - 1e-7  # back to linear power
+
+            # get a noise power-spectrogram with matching shape
+            noise_power = self.musan_noise_spectrogram(spec_power.shape, sr, nperseg=nperseg, noverlap=noverlap, forced_noise_file=None)
+
+            # choose SNR (dB) in same style as waveform-based method
+            snr_db = random.uniform(23, 30)
+            snr_linear = 10.0 ** (snr_db / 10.0)
+
+            # compute mean powers and scale noise power to achieve desired SNR (power ratio)
+            power_s = np.mean(spec_power) + 1e-12
+            power_n = np.mean(noise_power) + 1e-12
+            desired_noise_power = power_s / snr_linear
+            scale = desired_noise_power / power_n
+
+            # mix in power-domain
+            spec_mixed = spec_power + noise_power * scale
+
+            # convert back to log-power for the rest of the pipeline
+            spectrogram = np.log(spec_mixed + 1e-7)
+
+            measured_snr_db = 10*np.log10(np.mean(spec_power) / (np.mean((noise_power * scale)) + 1e-12))
+            #(f"Added MUSAN spectrogram noise: target SNR {snr_db:.1f} dB, measured SNR {measured_snr_db:.2f} dB")
+
         # normalise to zero mean and unit variance
         mean = np.mean(spectrogram)
         std = np.std(spectrogram)
         spectrogram = np.divide(spectrogram - mean, std + 1e-9)
 
-        # noise = np.random.uniform(-0.05,0.05, spectrogram.shape)
-        # spectrogram = spectrogram + noise
-
-        print(spectrogram.shape)
+        noise = np.random.normal(0, 0.05, spectrogram.shape)
+        spectrogram = spectrogram + noise
 
         spectrogram = cv2.resize(spectrogram, (224, 224))
 
         # save spectrogram as float32
-        np.save(out_npy_path, spectrogram.astype(np.float32))
+        if out_npy_path is not None:
+            np.save(out_npy_path, spectrogram.astype(np.float32))
+        else:
+            return spectrogram
 
     def create_mel_spectrogram_npy(self, y, sr, out_npy_path, n_mels=224, n_fft=512, hop_length=160, win_length=400):
         mel_spectrogram_transform = torchaudio.transforms.MelSpectrogram(
@@ -262,8 +378,6 @@ class DataConverter:
         # account for channels
         if a.ndim == 3:
             a = a.mean(axis=0)
-        
-        print("min,max,shape:", float(a.min()), float(a.max()), a.shape)
 
         plt.figure(figsize=(224/150, 224/150))  # width, height in inches = pixels / DPI
         plt.imshow(a, origin='lower', aspect='equal', cmap=cmap)
@@ -271,12 +385,19 @@ class DataConverter:
         plt.savefig(out_png, dpi=150, bbox_inches='tight', pad_inches=0)
         plt.close()
 
-    def batch_create_spectrogram_samples(self, input_folder, output_folder, add_noise=True, hist_eq=None):
+    def batch_create_spectrogram_samples(self, input_folder, output_folder, add_noise=True, hist_eq=None, use_per_file = 1):
+        """
+        
+        Batch process all wav files in input_folder, creating spectrogram .npy files in output_folder
+        
+        """
+
+
         # simple progress counter
         all_files = os.listdir(input_folder)
         total_wavs = sum(1 for f in all_files if f.lower().endswith('.wav'))
         counter = 0
-        step = max(1, total_wavs // 10) if total_wavs > 0 else 1
+        step = max(1, total_wavs // 500) if total_wavs > 0 else 1
 
         for file in all_files:
             if not file.endswith(".wav"):
@@ -298,22 +419,30 @@ class DataConverter:
             if duration > self.input_time:
                 continue
 
-            y, sr, num_repetitions = self.create_augmented_wav(filepath, self.output_time, self.max_repetitions)
-            if add_noise:
-                y = self.add_musan_noise(y, sr, snr_db_range=(0,10), debug_wav=False)
-            base_name = os.path.splitext(file)[0]
-            npy_path = os.path.join(output_folder, base_name + "_spec_" + str(num_repetitions) + ".npy")
-            self.create_spectrogram_npy(y, sr, npy_path, hist_eq=hist_eq)
+            for j in range(0, use_per_file):
+                y, sr, num_repetitions = self.create_augmented_wav(filepath, self.output_time, self.max_repetitions)
+                base_name = os.path.splitext(file)[0]
+                npy_path = os.path.join(output_folder, base_name + "_spec_" + str(j) + "_" + str(num_repetitions) + ".npy")
+                self.create_spectrogram_npy(y, sr, npy_path, hist_eq=hist_eq, add_noise=add_noise)
 
 if __name__ == '__main__':
     converter = DataConverter()
-    y, sr, num_repetitions = converter.create_augmented_wav("Preprocessing/drop.wav", converter.output_time, converter.max_repetitions, forced_repetitions=8)
-    #y = converter.add_musan_noise(y, sr, snr_db_range=(0,10), debug_wav=False)
-    converter.create_spectrogram_npy(y, sr, "drop_spec_" + str(num_repetitions) + ".npy", hist_eq='global')
+    
+    #get max 2 second audio from FSD50K dev set
+    duration = 3.0
+    while duration > 2.0:
+        choice = random.choice(os.listdir("/scratch/local/ssd/hani/FSD50K/train/"))
+        filepath = os.path.join("/scratch/local/ssd/hani/FSD50K/train/", choice)
+        try:
+            info = torchaudio.info(filepath)
+            duration = info.num_frames / info.sample_rate
+        except Exception:
+            # fall back to loading if info() not available
+            tmp_y, tmp_sr = torchaudio.load(filepath, normalize=True)
+            duration = tmp_y.shape[1] / tmp_sr
+        print("Chosen file:", choice, " Duration:", duration)
+
+    y, sr, num_repetitions = converter.create_augmented_wav(filepath, converter.output_time, converter.max_repetitions, forced_repetitions=5)
+    print("Repetitions:", num_repetitions)
+    converter.create_spectrogram_npy(y, sr, "drop_spec_" + str(num_repetitions) + ".npy", hist_eq="global", add_noise=True)
     converter.visualize_npy("drop_spec_" + str(num_repetitions) + ".npy", "drop_spec_global.png")
-
-    converter.create_spectrogram_npy(y, sr, "drop_spec_" + str(num_repetitions) + ".npy", hist_eq='clahe')
-    converter.visualize_npy("drop_spec_" + str(num_repetitions) + ".npy", "drop_spec_clahe.png")
-
-    converter.create_spectrogram_npy(y, sr, "drop_spec_" + str(num_repetitions) + ".npy", hist_eq=None)
-    converter.visualize_npy("drop_spec_" + str(num_repetitions) + ".npy", "drop_spec_nohist.png")

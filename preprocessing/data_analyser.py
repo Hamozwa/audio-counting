@@ -1,3 +1,10 @@
+"""
+data_analyser.py
+
+Functions to analyse audio dataset files
+
+"""
+
 import os
 import wave
 import matplotlib.pyplot as plt
@@ -16,8 +23,7 @@ def file_length_histogram(folder):
     plt.xlabel("Duration (seconds)")
     plt.ylabel("Number of files")
     plt.title("WAV File Duration Histogram")
-    plt.savefig("output.png", dpi=150, bbox_inches='tight', pad_inches=0)
-    plt.close()
+    plt.show()
 
 def audio_count_histogram(folder):
     audio_counts = []
@@ -30,18 +36,12 @@ def audio_count_histogram(folder):
     plt.hist(audio_counts, bins=range(min(audio_counts), max(audio_counts) + 2), edgecolor='black', align='left')
     plt.xlabel("Audio Repetitions in File")
     plt.ylabel("Count")
-    plt.savefig("output.png", dpi=150, bbox_inches='tight', pad_inches=0)
+    plt.title("Histogram of Audio Repetitions")
+    plt.savefig("audio_repetitions_histogram.png", dpi=150, bbox_inches='tight', pad_inches=0)
     plt.close()
 
-# dir = "DataConverter_input"
-# files = file_length_histogram(dir)
+dir = "/scratch/local/ssd/hani/FSD50K/FSD50K.eval_audio/"
+files = file_length_histogram(dir)
 
-# dir = "/scratch/local/ssd/hani/musan/noise/free-sound"
-# dir = "/scratch/local/ssd/hani/musan/noise/sound-bible"
-# file_length_histogram(dir)
-
-# dir = "/scratch/local/ssd/hani/spec/train/"
+# dir = "/scratch/local/ssd/hani/spec3/test/"
 # audio_count_histogram(dir)
-
-dir = "/scratch/local/ssd/hani/spec/test/"
-audio_count_histogram(dir)
