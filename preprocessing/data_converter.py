@@ -16,7 +16,7 @@ class DataConverter:
 
     """
 
-    def __init__(self, input_time=2, output_time=20, max_repetitions=8, resample_rate=16000):
+    def __init__(self, input_time=1.0, output_time=20, max_repetitions=8, resample_rate=16000):
         """init method"""
 
         self.input_time = input_time # maximum input audio length in seconds
@@ -47,7 +47,7 @@ class DataConverter:
         if not file.endswith(".wav"):
             return None, None, 0
 
-        y, sample_rate = torchaudio.load(file, normalize=True)
+        y, sample_rate = self._extract_peak(file, max_time_window=self.input_time)
 
         #resample
         y = torchaudio.transforms.Resample(orig_freq=sample_rate, new_freq=self.resample_rate)(y)
@@ -424,6 +424,47 @@ class DataConverter:
                 base_name = os.path.splitext(file)[0]
                 npy_path = os.path.join(output_folder, base_name + "_spec_" + str(j) + "_" + str(num_repetitions) + ".npy")
                 self.create_spectrogram_npy(y, sr, npy_path, hist_eq=hist_eq, add_noise=add_noise)
+
+    def _extract_peak(self, path, max_time_window=1.0):
+        """Extract peak volume moment from audio file"""
+
+        x, sr = torchaudio.load(path)
+        x = x.mean(dim=0).numpy()
+        N = len(x)
+
+        #find peak index
+        time_window = random.uniform(0.1, max_time_window)
+        window_len = int(sr * time_window)
+        peak_idx = np.argmax(np.abs(x))
+
+        #randomly position window around peak
+        peak_position = random.randint(0, window_len - 1)
+        start = peak_idx - peak_position
+        end = start + window_len
+
+        if start < 0:
+            start = 0
+            end = window_len
+
+        if end > N:
+            end = N
+            start = end - window_len
+
+        segment = x[start:end]
+
+        #pad as needed
+        if len(segment) < window_len:
+            pad_left = 0
+            pad_right = 0
+
+            if start == 0:
+                pad_left = window_len - len(segment)
+            elif end == N:
+                pad_right = window_len - len(segment)
+
+            segment = np.pad(segment, (pad_left, pad_right))
+
+        return segment, sr
 
 if __name__ == '__main__':
     converter = DataConverter()
