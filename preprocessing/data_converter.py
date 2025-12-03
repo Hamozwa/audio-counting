@@ -16,7 +16,7 @@ class DataConverter:
 
     """
 
-    def __init__(self, input_time=1.0, output_time=10, max_repetitions=8, resample_rate=16000):
+    def __init__(self, input_time=1.0, output_time=10, max_repetitions=8, resample_rate=16000, musan_options=["noise"]):
         """init method"""
 
         self.input_time = input_time # maximum input audio length in seconds
@@ -24,9 +24,19 @@ class DataConverter:
         self.max_repetitions = max_repetitions
         self.resample_rate = resample_rate
 
+        search_dirs = []
         # Pre-scan MUSAN noise directories
-        folder = "/scratch/local/ssd/hani/musan/noise/"
-        search_dirs = [os.path.join(folder, 'sound-bible'), os.path.join(folder, 'free-sound')]
+        if "noise" in musan_options:
+            folder = "/scratch/local/ssd/hani/musan/noise/"
+            search_dirs += [os.path.join(folder, 'sound-bible'), os.path.join(folder, 'free-sound')]
+        if "music" in musan_options:
+            folder = "/scratch/local/ssd/hani/musan/music/"
+            search_dirs += [os.path.join(folder, 'fma'), os.path.join(folder, 'fma-western-art'), os.path.join(folder, 'hd-classical'), os.path.join(folder, 'jamendo'), os.path.join(folder, 'rfm')]
+        if "speech" in musan_options:
+            folder = "/scratch/local/ssd/hani/musan/speech/"
+            search_dirs += [os.path.join(folder, 'librivox'), os.path.join(folder, 'us-gov')]
+
+
         wav_files = []
         for d in search_dirs:
             if not os.path.isdir(d):
