@@ -18,10 +18,3 @@ converter.batch_create_spectrogram_samples(
     add_noise=True,
     use_per_file=2,
 )
-
-#random visualization of dataset sample
-
-# converter = data_converter.DataConverter()
-# choice = random.choice(os.listdir("/scratch/local/ssd/hani/countix-av-spec/train/"))
-# print("Visualizing:", choice)
-# converter.visualize_npy(os.path.join("/scratch/local/ssd/hani/countix-av-spec/train/", choice), "random_spec.png")

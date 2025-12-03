@@ -8,6 +8,9 @@ Functions to analyse audio dataset files
 import os
 import wave
 import matplotlib.pyplot as plt
+import random
+import data_converter
+import shutil
 
 def file_length_histogram(folder):
     durations = []
@@ -40,8 +43,18 @@ def audio_count_histogram(folder):
     plt.savefig("audio_repetitions_histogram.png", dpi=150, bbox_inches='tight', pad_inches=0)
     plt.close()
 
-dir = "/scratch/local/ssd/hani/FSD50K/FSD50K.eval_audio/"
-files = file_length_histogram(dir)
+def visualise_random_sample(path="/scratch/local/ssd/hani/countix-av-spec/train/"):
+    converter = data_converter.DataConverter()
+    choice = random.choice(os.listdir(path))
+    shutil.copy(os.path.join(path, choice), "random_spec.npy")
+    print("Visualizing:", choice)
+    converter.visualize_npy(os.path.join(path, choice), "random_spec.png")
 
-# dir = "/scratch/local/ssd/hani/spec3/test/"
-# audio_count_histogram(dir)
+
+if __name__ == "__main__":
+    # dir = "/scratch/local/ssd/hani/FSD50K/FSD50K.eval_audio/"
+    # files = file_length_histogram(dir)
+
+    # dir = "/scratch/local/ssd/hani/spec3/test/"
+    # audio_count_histogram(dir)
+    visualise_random_sample()
