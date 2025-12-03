@@ -54,8 +54,8 @@ class DataConverter:
         sample_rate = self.resample_rate
 
 
-        file_samples = y.shape[1]
-        target_samples = output_time * sample_rate
+        file_samples = int(y.shape[1])
+        target_samples = int(output_time * sample_rate)
 
         if file_samples > target_samples:
             print(file + " is too long")
@@ -69,7 +69,7 @@ class DataConverter:
         else:
             num_repetitions = random.randint(0,max_repetitions)
 
-        zeroes_samples = target_samples - num_repetitions*file_samples
+        zeroes_samples = int(target_samples - num_repetitions * file_samples)
 
         #Randomly split zeroes lengths around repetitions
         cuts = sorted([random.randint(0, zeroes_samples) for _ in range(num_repetitions)])
@@ -80,8 +80,8 @@ class DataConverter:
 
         if num_repetitions > 0:
             # Random start and end padding
-            start_padding = min(max(0, int(random.gauss(zeroes_samples*0.25, zeroes_samples*0.09))), zeroes_samples*0.5)
-            end_padding = min(max(0, int(random.gauss(zeroes_samples*0.25, zeroes_samples*0.09))), zeroes_samples*0.5)
+            start_padding = int(min(max(0, int(random.gauss(zeroes_samples*0.25, zeroes_samples*0.09))), int(zeroes_samples*0.5)))
+            end_padding = int(min(max(0, int(random.gauss(zeroes_samples*0.25, zeroes_samples*0.09))), int(zeroes_samples*0.5)))
 
             remaining_zeroes = zeroes_samples - start_padding - end_padding
 
@@ -117,6 +117,11 @@ class DataConverter:
             start_padding = 0
             end_padding = zeroes_samples
             zeroes_lengths = []
+
+        # ensure all zero lengths are ints
+        zeroes_lengths = [int(x) for x in zeroes_lengths]
+        start_padding = int(start_padding)
+        end_padding = int(end_padding)
 
         output = torch.zeros(y.shape[0], target_samples)
         ptr = 0
@@ -316,7 +321,7 @@ class DataConverter:
             noise_power = self.musan_noise_spectrogram(spec_power.shape, sr, nperseg=nperseg, noverlap=noverlap, forced_noise_file=None)
 
             # choose SNR (dB) in same style as waveform-based method
-            snr_db = random.uniform(23, 30)
+            snr_db = random.uniform(21, 25)
             snr_linear = 10.0 ** (snr_db / 10.0)
 
             # compute mean powers and scale noise power to achieve desired SNR (power ratio)
