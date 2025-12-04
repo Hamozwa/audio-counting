@@ -314,7 +314,7 @@ class DataConverter:
         eq_f = eq_f * (orig_max - orig_min) + orig_min
         return eq_f
 
-    def create_spectrogram_npy(self, y, sr, out_npy_path = None, nperseg=512, noverlap=256, hist_eq=None, add_noise=False):
+    def create_spectrogram_npy(self, y, sr, out_npy_path = None, nperseg=512, noverlap=256, hist_eq=None, add_noise=False, snr_db_range=(21, 25)):
         waveform = y.mean(dim=0).cpu().numpy()
         _, _, spectrogram = signal.spectrogram(waveform, sr, nperseg=nperseg, noverlap=noverlap)
         spectrogram = np.log(spectrogram + 1e-7)
@@ -331,7 +331,7 @@ class DataConverter:
             noise_power = self.musan_noise_spectrogram(spec_power.shape, sr, nperseg=nperseg, noverlap=noverlap, forced_noise_file=None)
 
             # choose SNR (dB) in same style as waveform-based method
-            snr_db = random.uniform(21, 25)
+            snr_db = random.uniform(snr_db_range[0], snr_db_range[1])
             snr_linear = 10.0 ** (snr_db / 10.0)
 
             # compute mean powers and scale noise power to achieve desired SNR (power ratio)
@@ -400,7 +400,7 @@ class DataConverter:
         plt.savefig(out_png, dpi=150, bbox_inches='tight', pad_inches=0)
         plt.close()
 
-    def batch_create_spectrogram_samples(self, input_folder, output_folder, add_noise=True, hist_eq=None, use_per_file = 1):
+    def batch_create_spectrogram_samples(self, input_folder, output_folder, add_noise=True, hist_eq=None, use_per_file = 1, snr_db_range=(21, 25)):
         """
         
         Batch process all wav files in input_folder, creating spectrogram .npy files in output_folder
@@ -427,7 +427,7 @@ class DataConverter:
                 y, sr, num_repetitions = self.create_augmented_wav(filepath, self.output_time, self.max_repetitions)
                 base_name = os.path.splitext(file)[0]
                 npy_path = os.path.join(output_folder, base_name + "_spec_" + str(j) + "_" + str(num_repetitions) + ".npy")
-                self.create_spectrogram_npy(y, sr, npy_path, hist_eq=hist_eq, add_noise=add_noise)
+                self.create_spectrogram_npy(y, sr, npy_path, hist_eq=hist_eq, add_noise=add_noise, snr_db_range=snr_db_range)
 
     def _extract_peak(self, path, max_time_window=1.0):
         """Extract peak volume moment from audio file"""
@@ -473,12 +473,18 @@ class DataConverter:
         return segment, sr
 
 if __name__ == '__main__':
-    converter = DataConverter()
+    converter = DataConverter(musan_options =["music"])
     
     choice = random.choice(os.listdir("/scratch/local/ssd/hani/FSD50K/train/"))
     filepath = os.path.join("/scratch/local/ssd/hani/FSD50K/train/", choice)
 
     y, sr, num_repetitions = converter.create_augmented_wav(filepath, converter.output_time, converter.max_repetitions)
     print("Repetitions:", num_repetitions)
-    converter.create_spectrogram_npy(y, sr, "drop_spec_" + str(num_repetitions) + ".npy", hist_eq="global", add_noise=True)
-    converter.visualize_npy("drop_spec_" + str(num_repetitions) + ".npy", "drop_spec_global.png")
+    y = converter.add_musan_noise(y, sr, snr_db_range=(0, 10), debug_wav=True)
+    converter.create_spectrogram_npy(
+        y, sr,
+        out_npy_path="debug_spec.npy",
+        hist_eq='global',
+        add_noise=False
+    )
+    converter.visualize_npy("debug_spec.npy", "debug_spec.png", cmap="magma")
