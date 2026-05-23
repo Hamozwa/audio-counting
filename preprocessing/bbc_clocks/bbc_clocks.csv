@@ -1,0 +1,712 @@
+location,description,secs,category,CDNumber,CDName,tracknum,repetitions,start_time
+07070180.wav,Martinskirken bell (Copenhagen) - call to mid-morning service,94,Copenhagen,ECD104,Time - Clocks & Bells,37,-1,0.0
+07070179.wav,Copenhagen City Hall - 1/4 hour,9,Copenhagen,ECD104,Time - Clocks & Bells,36,4,0.0
+07070178.wav,Copenhagen City Hall - 1/2 hour,11,Copenhagen,ECD104,Time - Clocks & Bells,35,8,0.0
+07070177.wav,Copenhagen City Hall - bell strikes 12,65,Copenhagen,ECD104,Time - Clocks & Bells,34,-1,0.0
+07070176.wav,"Swiss Centre, Leicester Square - bell strikes 6 into carrillion of traditional tunes (some voices in background)",311,London: Leicester Square,ECD104,Time - Clocks & Bells,33,-1,0.0
+07070175.wav,"St.Michael's Church, St.Albans - bell strikes 9",33,Bells: Churc`hes,ECD104,Time - Clocks & Bells,32,9,0.0
+07070174.wav,St.Albans Catherdral - 1/4 hour,17,Bells: Cathedrals,ECD104,Time - Clocks & Bells,31,12,0.0
+07070173.wav,St.Albans Catherdral - bell strikes 8,52,Bells: Cathedrals,ECD104,Time - Clocks & Bells,30,-1,0.0
+07070172.wav,"Carfax Tower, Oxford (interior perspective) - 1/2 hour",24,Clocks: Striking,ECD104,Time - Clocks & Bells,29,10,0.0
+07070171.wav,"Carfax Tower, Oxford (interior perspective) - 1/4 hour",17,Clocks: Striking,ECD104,Time - Clocks & Bells,28,5,0.0
+07070170.wav,"Carfax Tower, Oxford (interior perspective) - strikes 12",64,Clocks: Striking,ECD104,Time - Clocks & Bells,27,-1,0.0
+07070169.wav,"Magdalen College, Oxford - 1/4 hour",13,Clocks: Striking,ECD104,Time - Clocks & Bells,26,6,0.0
+07070168.wav,"Magdalen College, Oxford - bell strikes 12",49,Clocks: Striking,ECD104,Time - Clocks & Bells,25,-1,0.0
+07070167.wav,"Merton College, Oxford - 1/4 hour",28,Clocks: Striking,ECD104,Time - Clocks & Bells,24,10,0.0
+07070166.wav,"Merton College, Oxford - 1/2 hour",25,Clocks: Striking,ECD104,Time - Clocks & Bells,23,7,0.0
+07070165.wav,"Merton College, Oxford (some voices and birdsong) - bell strikes 12",75,Clocks: Striking,ECD104,Time - Clocks & Bells,22,-1,0.0
+07070164.wav,"Tom, Christ Church, Oxford - strikes 12 (interior perspective)",78,Clocks: Striking,ECD104,Time - Clocks & Bells,21,12,0.0
+07070163.wav,Car clock ticking,156,Clocks: Ticking,ECD104,Time - Clocks & Bells,20,-1,0.0
+07070162.wav,Digital watch alarm,20,Alarms: Watches,ECD104,Time - Clocks & Bells,19,-1,0.0
+07070161.wav,Portable electric alarm clock,37,Clocks: Alarm,ECD104,Time - Clocks & Bells,18,10,0.0
+07070160.wav,Room full of ticking clocks,88,Clocks: Ticking,ECD104,Time - Clocks & Bells,17,-1,0.0
+07070159.wav,English clock (1715) - strikes 12 across halway,23,Clocks: Striking,ECD104,Time - Clocks & Bells,16,12,0.0
+07070158.wav,French clock (late 19th Century) - strikes 12,18,Clocks: Striking,ECD104,Time - Clocks & Bells,15,12,0.0
+07070157.wav,English Walnut clock (1700) - wound up,26,Clocks: Winding Up,ECD104,Time - Clocks & Bells,14,-1,0.0
+07070156.wav,English Walnut clock (1700) - strikes 12,16,Clocks: Striking,ECD104,Time - Clocks & Bells,13,12,0.0
+07070155.wav,Cuckoo clock (1820) - ticking,215,Clocks: Cuckoo,ECD104,Time - Clocks & Bells,12,-1,0.0
+07070154.wav,Cuckoo clock (1820) - strikes 12,34,Clocks: Cuckoo,ECD104,Time - Clocks & Bells,11,12,0.0
+07070153.wav,Bracket clock (1740) with gong - strikes 12,23,Clocks: Gong,ECD104,Time - Clocks & Bells,10,12,0.0
+07070152.wav,Bracket with St.Michael's chimes - 3/4 hour,10,Clocks: Chiming,ECD104,Time - Clocks & Bells,9,-1,0.0
+07070151.wav,Bracket with St.Michael's chimes - 1/2 hour,9,Clocks: Chiming,ECD104,Time - Clocks & Bells,8,-1,0.0
+07070150.wav,Bracket with St.Michael's chimes - 1/4 hour,6,Clocks: Chiming,ECD104,Time - Clocks & Bells,7,-1,0.0
+07070149.wav,Bracket with St.Michael's chimes - strikes 12,24,Clocks: Chiming,ECD104,Time - Clocks & Bells,6,-1,0.0
+07070148.wav,Bracket clock (1920) with Westminster chimes - strikes 12,59,Clocks: Chiming,ECD104,Time - Clocks & Bells,5,-1,0.0
+07070147.wav,Grandfather clock (1680) - ticking,243,Clocks: Grandfather,ECD104,Time - Clocks & Bells,4,-1,0.0
+07070146.wav,Grandfather clock (1850) - strikes 12 (rapid),18,Clocks: Grandfather,ECD104,Time - Clocks & Bells,3,12,0.0
+07070145.wav,Grandfather clock (1750) - strikes 12,40,Clocks: Grandfather,ECD104,Time - Clocks & Bells,2,12,0.0
+07070144.wav,Grandfather clock (1710) - strikes 12,28,Clocks: Grandfather,ECD104,Time - Clocks & Bells,1,12,0.0
+07036204.wav,"Grandfather Clock with St Michael's chimes, winding by chain.",40,,EC209D,Domestic Clock,10,-1,0.0
+07036203.wav,"Grandfather Clock with St Michael's chimes, striking twelve o'clock.",66,,EC209D,Domestic Clock,9,12,20.0
+07036202.wav,"Grandfather Clock with St Michael's chimes, striking eleven o'clock.",61,,EC209D,Domestic Clock,8,11,20.0
+07036201.wav,"Grandfather Clock with St Michael's chimes, striking ten o'clock.",59,,EC209D,Domestic Clock,7,10,20.0
+07036200.wav,"Grandfather Clock with St Michael's chimes, striking nine o'clock.",57,,EC209D,Domestic Clock,6,9,20.0
+07036199.wav,"Grandfather Clock with St Michael's chimes, striking eight o'clock.",54,,EC209D,Domestic Clock,5,8,20.0
+07036198.wav,"Grandfather Clock with St Michael's chimes, striking seven o'clock.",50,,EC209D,Domestic Clock,4,7,20.0
+07036197.wav,"Grandfather Clock with St Michael's chimes, striking six o'clock.",48,,EC209D,Domestic Clock,3,6,20.0
+07036196.wav,"Grandfather Clock with St Michael's chimes, striking five o'clock.",45,,EC209D,Domestic Clock,2,5,20.0
+07036195.wav,"Grandfather Clock with St Michael's chimes, striking four o'clock.",42,,EC209D,Domestic Clock,1,4,20.0
+07036194.wav,"Grandfather Clock with St Michael's chimes, striking three o'clock.",39,,EC209C,Domestic Clock,12,3,20.0
+07036193.wav,"Grandfather Clock with St Michael's chimes, striking two o'clock.",40,,EC209C,Domestic Clock,11,2,20.0
+07036192.wav,"Grandfather Clock with St Michael's chimes, striking one o'clock.",34,,EC209C,Domestic Clock,10,1,20.0
+07036191.wav,"Grandfather Clock with St Michael's chimes, striking quarter to the hour.",30,,EC209C,Domestic Clock,9,-1,0.0
+07036190.wav,"Grandfather Clock with St Michael's chimes, striking half past the hour.",21,,EC209C,Domestic Clock,8,-1,0.0
+07036189.wav,"Grandfather Clock with St Michael's chimes, striking quarter past the hour.",16,,EC209C,Domestic Clock,7,8,0.0
+07036188.wav,"Domestic Mantle Clock striking twelve o'clock. (Early 19th Century clock chimes 'B', 8 bells, 1 gong.)",64,,EC209C,Domestic Clock,6,12,15.0
+07036187.wav,"Domestic Mantle Clock striking eleven o'clock. (Early 19th Century clock chimes 'B', 8 bells, 1 gong.)",62,,EC209C,Domestic Clock,5,11,15.0
+07036186.wav,"Domestic Mantle Clock striking ten o'clock. (Early 19th Century clock chimes 'B', 8 bells, 1 gong.)",62,,EC209C,Domestic Clock,4,10,15.0
+07036185.wav,"Domestic Mantle Clock striking nine o'clock. (Early 19th Century clock chimes 'B', 8 bells, 1 gong.)",58,,EC209C,Domestic Clock,3,9,15.0
+07036184.wav,"Domestic Mantle Clock striking eight o'clock. (Early 19th Century clock chimes 'B', 8 bells, 1 gong.)",56,,EC209C,Domestic Clock,2,8,15.0
+07036183.wav,"Domestic Mantle Clock striking seven o'clock. (Early 19th Century clock chimes 'B', 8 bells, 1 gong.)",52,,EC209C,Domestic Clock,1,7,15.0
+07036182.wav,"Domestic Mantle Clock striking six o'clock. (Early 19th Century clock chimes 'B', 8 bells, 1 gong.)",54,,EC209B,Domestic Clock,12,6,15.0
+07036181.wav,"Domestic Mantle Clock striking five o'clock. (Early 19th Century clock chimes 'B', 8 bells, 1 gong.)",51,,EC209B,Domestic Clock,11,5,15.0
+07036180.wav,"Domestic Mantle Clock striking four o'clock. (Early 19th Century clock chimes 'B', 8 bells, 1 gong.)",47,,EC209B,Domestic Clock,10,4,15.0
+07036179.wav,"Domestic Mantle Clock striking three o'clock. (Early 19th Century clock chimes 'B', 8 bells, 1 gong.)",45,,EC209B,Domestic Clock,9,3,15.0
+07036178.wav,"Domestic Mantle Clock striking two o'clock. (Early 19th Century clock chimes 'B', 8 bells, 1 gong.)",45,,EC209B,Domestic Clock,8,2,15.0
+07036177.wav,"Domestic Mantle Clock striking one o'clock. (Early 19th Century clock chimes 'B', 8 bells, 1 gong.)",40,,EC209B,Domestic Clock,7,1,15.0
+07036176.wav,"Domestic Mantle Clock striking quarter to the hour. (Early 19th Century clock chimes 'B', 8 bells, 1 gong.)",24,,EC209B,Domestic Clock,6,-1,0.0
+07036175.wav,"Domestic Mantle Clock striking half past the hour. (Early 19th Century clock chimes 'B', 8 bells, 1 gong.)",21,,EC209B,Domestic Clock,5,-1,0.0
+07036174.wav,"Domestic Mantle Clock striking quarter past the hour. (Early 19th Century clock chimes 'B', 8 bells, 1 gong.)",18,,EC209B,Domestic Clock,4,8,0.0
+07036173.wav,"Domestic Mantle Clock striking twelve o'clock. (Early 19th Century clock chimes 'A', 8 bells, 1 gong.)",69,,EC209B,Domestic Clock,3,12,15.0
+07036172.wav,"Domestic Mantle Clock striking eleven o'clock. (Early 19th Century clock chimes 'A', 8 bells, 1 gong.)",65,,EC209B,Domestic Clock,2,11,15.0
+07036171.wav,"Domestic Mantle Clock striking ten o'clock. (Early 19th Century clock chimes 'A', 8 bells, 1 gong.)",64,,EC209B,Domestic Clock,1,10,15.0
+07036170.wav,"Domestic Mantle Clock striking nine o'clock. (Early 19th Century clock chimes 'A', 8 bells, 1 gong.)",60,,EC209A,Domestic Clock,12,9,15.0
+07036169.wav,"Domestic Mantle Clock striking eight o'clock. (Early 19th Century clock chimes 'A', 8 bells, 1 gong.)",56,,EC209A,Domestic Clock,11,8,15.0
+07036168.wav,"Domestic Mantle Clock striking seven o'clock. (Early 19th Century clock chimes 'A', 8 bells, 1 gong.)",56,,EC209A,Domestic Clock,10,7,15.0
+07036167.wav,"Domestic Mantle Clock striking six o'clock. (Early 19th Century clock chimes 'A', 8 bells, 1 gong.)",52,,EC209A,Domestic Clock,9,6,15.0
+07036166.wav,"Domestic Mantle Clock striking five o'clock. (Early 19th Century clock chimes 'A', 8 bells, 1 gong.)",50,,EC209A,Domestic Clock,8,5,15.0
+07036165.wav,"Domestic Mantle Clock striking four o'clock. (Early 19th Century clock chimes 'A', 8 bells, 1 gong.)",47,,EC209A,Domestic Clock,7,4,15.0
+07036164.wav,"Domestic Mantle Clock striking three o'clock. (Early 19th Century clock chimes 'A', 8 bells, 1 gong.)",43,,EC209A,Domestic Clock,6,3,15.0
+07036163.wav,"Domestic Mantle Clock striking two o'clock. (Early 19th Century clock chimes 'A', 8 bells, 1 gong.)",42,,EC209A,Domestic Clock,5,2,15.0
+07036162.wav,"Domestic Mantle Clock striking one o'clock. (Early 19th Century clock chimes 'A', 8 bells, 1 gong.)",43,,EC209A,Domestic Clock,4,1,15.0
+07036161.wav,"Domestic Mantle Clock striking quarter to the hour. (Early 19th Century clock chimes 'A', 8 bells, 1 gong.)",23,,EC209A,Domestic Clock,3,-1,0.0
+07036160.wav,"Domestic Mantle Clock striking half past the hour. (Early 19th Century clock chimes 'A', 8 bells, 1 gong.)",19,,EC209A,Domestic Clock,2,-1,0.0
+07036159.wav,"Domestic Mantle Clock striking quarter past the hour. (Early 19th Century clock chimes 'A', 8 bells, 1 gong.)",16,,EC209A,Domestic Clock,1,-1,0.0
+07032157.wav,Christ's College clock striking twelve o'clock.,44,,EC212C,"Christ’S College Clock, Cambridge",12,12,10.0
+07032156.wav,Christ's College clock striking eleven o'clock.,42,,EC212C,"Christ’S College Clock, Cambridge",11,11,10.0
+07032155.wav,Christ's College clock striking ten o'clock.,41,,EC212C,"Christ’S College Clock, Cambridge",10,10,10.0
+07032154.wav,Christ's College clock striking nine o'clock.,39,,EC212C,"Christ’S College Clock, Cambridge",9,9,10.0
+07032153.wav,Christ's College clock striking eight o'clock.,37,,EC212C,"Christ’S College Clock, Cambridge",8,8,10.0
+07032152.wav,Christ's College clock striking seven o'clock.,36,,EC212C,"Christ’S College Clock, Cambridge",7,7,10.0
+07032151.wav,Christ's College clock striking six o'clock.,34,,EC212C,"Christ’S College Clock, Cambridge",6,6,10.0
+07032150.wav,Christ's College clock striking five o'clock.,34,,EC212C,"Christ’S College Clock, Cambridge",5,5,10.0
+07032149.wav,Christ's College clock striking four o'clock.,32,,EC212C,"Christ’S College Clock, Cambridge",4,4,10.0
+07032148.wav,Christ's College clock striking three o'clock.,30,,EC212C,"Christ’S College Clock, Cambridge",3,3,10.0
+07032147.wav,Christ's College clock striking two o'clock.,28,,EC212C,"Christ’S College Clock, Cambridge",2,2,10.0
+07032146.wav,Christ's College clock striking one o'clock.,23,,EC212C,"Christ’S College Clock, Cambridge",1,1,10.0
+07032140.wav,Emmanuel College clock striking twelve o'clock.,49,,EC212A,"Emmanuel College Clock, Cambridge",12,12,0.0
+07032139.wav,Emmanuel College clock striking eleven o'clock.,45,,EC212A,"Emmanuel College Clock, Cambridge",11,11,0.0
+07032138.wav,Emmanuel College clock striking ten o'clock.,44,,EC212A,"Emmanuel College Clock, Cambridge",10,10,0.0
+07032137.wav,Emmanuel College clock striking nine o'clock.,40,,EC212A,"Emmanuel College Clock, Cambridge",9,9,0.0
+07032136.wav,Emmanuel College clock striking eight o'clock.,38,,EC212A,"Emmanuel College Clock, Cambridge",8,8,0.0
+07032135.wav,Emmanuel College clock striking seven o'clock.,36,,EC212A,"Emmanuel College Clock, Cambridge",7,7,0.0
+07032134.wav,Emmanuel College clock striking six o'clock.,33,,EC212A,"Emmanuel College Clock, Cambridge",6,6,0.0
+07032133.wav,Emmanuel College clock striking five o'clock.,31,,EC212A,"Emmanuel College Clock, Cambridge",5,5,0.0
+07032132.wav,Emmanuel College clock striking four o'clock.,29,,EC212A,"Emmanuel College Clock, Cambridge",4,4,0.0
+07032131.wav,Emmanuel College clock striking three o'clock.,27,,EC212A,"Emmanuel College Clock, Cambridge",3,3,0.0
+07032130.wav,Emmanuel College clock striking two o'clock.,24,,EC212A,"Emmanuel College Clock, Cambridge",2,2,0.0
+07032129.wav,Emmanuel College clock striking one o'clock.,23,,EC212A,"Emmanuel College Clock, Cambridge",1,1,0.0
+07022251.wav,"Lantern clock striking twelve o'clock. (Domestic lantern clock, manufactured 1615.)",46,,EC48Y,"Lantern Clock, 1615",12,12,0.0
+07022250.wav,"Lantern clock striking eleven o'clock. (Domestic lantern clock, manufactured 1615.)",43,,EC48Y,"Lantern Clock, 1615",11,11,0.0
+07022249.wav,"Lantern clock striking ten o'clock. (Domestic lantern clock, manufactured 1615.)",40,,EC48Y,"Lantern Clock, 1615",10,10,0.0
+07022248.wav,"Lantern clock striking nine o'clock. (Domestic lantern clock, manufactured 1615.)",35,,EC48Y,"Lantern Clock, 1615",9,9,0.0
+07022247.wav,"Lantern clock striking eight o'clock. (Domestic lantern clock, manufactured 1615.)",32,,EC48Y,"Lantern Clock, 1615",8,8,0.0
+07022246.wav,"Lantern clock striking seven o'clock. (Domestic lantern clock, manufactured 1615.)",30,,EC48Y,"Lantern Clock, 1615",7,7,0.0
+07022245.wav,"Lantern clock striking six o'clock. (Domestic lantern clock, manufactured 1615.)",26,,EC48Y,"Lantern Clock, 1615",6,6,0.0
+07022244.wav,"Lantern clock striking five o'clock. (Domestic lantern clock, manufactured 1615.)",24,,EC48Y,"Lantern Clock, 1615",5,5,0.0
+07022243.wav,"Lantern clock striking four o'clock. (Domestic lantern clock, manufactured 1615.)",21,,EC48Y,"Lantern Clock, 1615",4,4,0.0
+07022242.wav,"Lantern clock striking three o'clock. (Domestic lantern clock, manufactured 1615.)",17,,EC48Y,"Lantern Clock, 1615",3,3,0.0
+07022241.wav,"Lantern clock striking two o'clock. (Domestic lantern clock, manufactured 1615.)",13,,EC48Y,"Lantern Clock, 1615",2,2,0.0
+07022240.wav,"Lantern clock striking one o'clock. (Domestic lantern clock, manufactured 1615.)",11,,EC48Y,"Lantern Clock, 1615",1,1,0.0
+07022239.wav,"Domestic clock with striker removed striking twelve o'clock. (No chimes, hammer merely vibrates.)",29,,EC48W,Domestic Clock: Strike Removed; Hammer Merely Vibrates,12,12,0.0
+07022238.wav,"Domestic clock with striker removed striking eleven o'clock. (No chimes, hammer merely vibrates.)",27,,EC48W,Domestic Clock: Strike Removed; Hammer Merely Vibrates,11,11,0.0
+07022237.wav,"Domestic clock with striker removed striking ten o'clock. (No chimes, hammer merely vibrates.)",25,,EC48W,Domestic Clock: Strike Removed; Hammer Merely Vibrates,10,10,0.0
+07022236.wav,"Domestic clock with striker removed striking nine o'clock. (No chimes, hammer merely vibrates.)",23,,EC48W,Domestic Clock: Strike Removed; Hammer Merely Vibrates,9,9,0.0
+07022235.wav,"Domestic clock with striker removed striking eight o'clock. (No chimes, hammer merely vibrates.)",20,,EC48W,Domestic Clock: Strike Removed; Hammer Merely Vibrates,8,8,0.0
+07022234.wav,"Domestic clock with striker removed striking seven o'clock. (No chimes, hammer merely vibrates.)",19,,EC48W,Domestic Clock: Strike Removed; Hammer Merely Vibrates,7,7,0.0
+07022233.wav,"Domestic clock with striker removed striking six o'clock. (No chimes, hammer merely vibrates.)",17,,EC48W,Domestic Clock: Strike Removed; Hammer Merely Vibrates,6,6,0.0
+07022232.wav,"Domestic clock with striker removed striking five o'clock. (No chimes, hammer merely vibrates.)",15,,EC48W,Domestic Clock: Strike Removed; Hammer Merely Vibrates,5,5,0.0
+07022231.wav,"Domestic clock with striker removed striking four o'clock. (No chimes, hammer merely vibrates.)",13,,EC48W,Domestic Clock: Strike Removed; Hammer Merely Vibrates,4,4,0.0
+07022230.wav,"Domestic clock with striker removed striking three o'clock. (No chimes, hammer merely vibrates.)",11,,EC48W,Domestic Clock: Strike Removed; Hammer Merely Vibrates,3,3,0.0
+07022229.wav,"Domestic clock with striker removed striking two o'clock. (No chimes, hammer merely vibrates.)",8,,EC48W,Domestic Clock: Strike Removed; Hammer Merely Vibrates,2,2,0.0
+07022228.wav,"Domestic clock with striker removed striking one o'clock. (No chimes, hammer merely vibrates.)",7,,EC48W,Domestic Clock: Strike Removed; Hammer Merely Vibrates,1,1,0.0
+07022227.wav,Domestic clock striking twelve o'clock. (English domestic clock with double-strike mechanism.),35,,EC48V,English Domestic Clock: Double Strike,12,12,0.0
+07022226.wav,Domestic clock striking eleven o'clock. (English domestic clock with double-strike mechanism.),32,,EC48V,English Domestic Clock: Double Strike,11,11,0.0
+07022225.wav,Domestic clock striking ten o'clock. (English domestic clock with double-strike mechanism.),31,,EC48V,English Domestic Clock: Double Strike,10,10,0.0
+07022224.wav,Domestic clock striking nine o'clock. (English domestic clock with double-strike mechanism.),29,,EC48V,English Domestic Clock: Double Strike,9,9,0.0
+07022223.wav,Domestic clock striking eight o'clock. (English domestic clock with double-strike mechanism.),25,,EC48V,English Domestic Clock: Double Strike,8,8,0.0
+07022222.wav,Domestic clock striking seven o'clock. (English domestic clock with double-strike mechanism.),23,,EC48V,English Domestic Clock: Double Strike,7,7,0.0
+07022221.wav,Domestic clock striking six o'clock. (English domestic clock with double-strike mechanism.),21,,EC48V,English Domestic Clock: Double Strike,6,6,0.0
+07022220.wav,Domestic clock striking five o'clock. (English domestic clock with double-strike mechanism.),20,,EC48V,English Domestic Clock: Double Strike,5,5,0.0
+07022219.wav,Domestic clock striking four o'clock. (English domestic clock with double-strike mechanism.),18,,EC48V,English Domestic Clock: Double Strike,4,4,0.0
+07022218.wav,Domestic clock striking three o'clock. (English domestic clock with double-strike mechanism.),17,,EC48V,English Domestic Clock: Double Strike,3,3,0.0
+07022217.wav,Domestic clock striking two o'clock. (English domestic clock with double-strike mechanism.),14,,EC48V,English Domestic Clock: Double Strike,2,2,0.0
+07022216.wav,Domestic clock striking one o'clock. (English domestic clock with double-strike mechanism.),13,,EC48V,English Domestic Clock: Double Strike,1,1,0.0
+07022215.wav,Cuckoo clock striking twelve o'clock. (Cuckoo only.),13,,EC48U,Cuckoo Clock (Cuckoo Only),12,12,0.0
+07022214.wav,Cuckoo clock striking eleven o'clock. (Cuckoo only.),12,,EC48U,Cuckoo Clock (Cuckoo Only),11,11,0.0
+07022213.wav,Cuckoo clock striking ten o'clock. (Cuckoo only.),11,,EC48U,Cuckoo Clock (Cuckoo Only),10,10,0.0
+07022212.wav,Cuckoo clock striking nine o'clock. (Cuckoo only.),11,,EC48U,Cuckoo Clock (Cuckoo Only),9,9,0.0
+07022211.wav,Cuckoo clock striking eight o'clock. (Cuckoo only.),10,,EC48U,Cuckoo Clock (Cuckoo Only),8,8,0.0
+07022210.wav,Cuckoo clock striking seven o'clock. (Cuckoo only.),9,,EC48U,Cuckoo Clock (Cuckoo Only),7,7,0.0
+07022209.wav,Cuckoo clock striking six o'clock. (Cuckoo only.),8,,EC48U,Cuckoo Clock (Cuckoo Only),6,6,0.0
+07022208.wav,Cuckoo clock striking five o'clock. (Cuckoo only.),8,,EC48U,Cuckoo Clock (Cuckoo Only),5,5,0.0
+07022207.wav,Cuckoo clock striking four o'clock. (Cuckoo only.),7,,EC48U,Cuckoo Clock (Cuckoo Only),4,4,0.0
+07022206.wav,Cuckoo clock striking three o'clock. (Cuckoo only.),6,,EC48U,Cuckoo Clock (Cuckoo Only),3,3,0.0
+07022205.wav,Cuckoo clock striking two o'clock. (Cuckoo only.),6,,EC48U,Cuckoo Clock (Cuckoo Only),2,2,0.0
+07022204.wav,Cuckoo clock striking one o'clock. (Cuckoo only.),6,,EC48U,Cuckoo Clock (Cuckoo Only),1,1,0.0
+07022203.wav,Cuckoo clock striking twelve o'clock. (Cuckoo & chimes.),15,,EC48T,Cuckoo Clock (Cuckoo & Chimes),12,12,0.0
+07022202.wav,Cuckoo clock striking eleven o'clock. (Cuckoo & chimes.),14,,EC48T,Cuckoo Clock (Cuckoo & Chimes),11,11,0.0
+07022201.wav,Cuckoo clock striking ten o'clock. (Cuckoo & chimes.),14,,EC48T,Cuckoo Clock (Cuckoo & Chimes),10,10,0.0
+07022200.wav,Cuckoo clock striking nine o'clock. (Cuckoo & chimes.),12,,EC48T,Cuckoo Clock (Cuckoo & Chimes),9,9,0.0
+07022199.wav,Cuckoo clock striking eight o'clock. (Cuckoo & chimes.),11,,EC48T,Cuckoo Clock (Cuckoo & Chimes),8,8,0.0
+07022198.wav,Cuckoo clock striking seven o'clock. (Cuckoo & chimes.),11,,EC48T,Cuckoo Clock (Cuckoo & Chimes),7,7,0.0
+07022197.wav,Cuckoo clock striking six o'clock. (Cuckoo & chimes.),10,,EC48T,Cuckoo Clock (Cuckoo & Chimes),6,6,0.0
+07022196.wav,Cuckoo clock striking five o'clock. (Cuckoo & chimes.),8,,EC48T,Cuckoo Clock (Cuckoo & Chimes),5,5,0.0
+07022195.wav,Cuckoo clock striking four o'clock. (Cuckoo & chimes.),8,,EC48T,Cuckoo Clock (Cuckoo & Chimes),4,4,0.0
+07022194.wav,Cuckoo clock striking three o'clock. (Cuckoo & chimes.),7,,EC48T,Cuckoo Clock (Cuckoo & Chimes),3,3,0.0
+07022193.wav,Cuckoo clock striking two o'clock. (Cuckoo & chimes.),7,,EC48T,Cuckoo Clock (Cuckoo & Chimes),2,2,0.0
+07022192.wav,Cuckoo clock striking one o'clock. (Cuckoo & chimes.) (NB half-hour is same as one o'clock.),6,,EC48T,Cuckoo Clock (Cuckoo & Chimes),1,1,0.0
+07022191.wav,Cuckoo clock ticking.,243,,EC48S,Clocks,7,-1,0.0
+07022190.wav,Winding up cuckoo clock.,27,,EC48S,Clocks,6,-1,0.0
+07022189.wav,"Grandfather clock ticking. (Bell type Grandfather clock with Whittington chimes, manufactured in London 1845.)",123,,EC48S,Clocks,5,-1,15.0
+07022188.wav,"Grandfather clock ticking. (Bell type Grandfather clock with Whittington chimes, manufactured in London 1845.)",186,,EC48S,Clocks,4,-1,15.0
+07022187.wav,"Grandfather clock striking nine o'clock. (Bell type Grandfather clock with Whittington chimes, manufactured in London 1845.)",50,,EC48S,Clocks,3,9,15.0
+07022186.wav,"Grandfather clock striking eight o'clock. (Bell type Grandfather clock with Whittington chimes, manufactured in London 1845.)",47,,EC48S,Clocks,2,8,15.0
+07022185.wav,"Grandfather clock striking seven o'clock. (Bell type Grandfather clock with Whittington chimes, manufactured in London 1845.)",41,,EC48S,Clocks,1,7,15.0
+07022184.wav,"Grandfather clock striking six o'clock. (Bell type Grandfather clock with Whittington chimes, manufactured in London 1845.)",40,,EC48R,"Grandfather Clock: Bell Type (London, 1845)",12,6,15.0
+07022183.wav,"Grandfather clock striking five o'clock. (Bell type Grandfather clock with Whittington chimes, manufactured in London 1845.)",35,,EC48R,"Grandfather Clock: Bell Type (London, 1845)",11,5,15.0
+07022182.wav,"Grandfather clock striking four o'clock. (Bell type Grandfather clock with Whittington chimes, manufactured in London 1845.)",33,,EC48R,"Grandfather Clock: Bell Type (London, 1845)",10,4,15.0
+07022181.wav,"Grandfather clock striking three o'clock. (Bell type Grandfather clock with Whittington chimes, manufactured in London 1845.)",30,,EC48R,"Grandfather Clock: Bell Type (London, 1845)",9,3,15.0
+07022180.wav,"Grandfather clock striking two o'clock. (Bell type Grandfather clock with Whittington chimes, manufactured in London 1845.)",29,,EC48R,"Grandfather Clock: Bell Type (London, 1845)",8,2,15.0
+07022179.wav,"Grandfather clock striking one o'clock. (Bell type Grandfather clock with Whittington chimes, manufactured in London 1845.)",26,,EC48R,"Grandfather Clock: Bell Type (London, 1845)",7,1,15.0
+07022178.wav,"Grandfather clock striking twelve o'clock. (Bell type Grandfather clock with Whittington chimes, manufactured in London 1845.)",52,,EC48R,"Grandfather Clock: Bell Type (London, 1845)",6,12,15.0
+07022177.wav,"Grandfather clock striking eleven o'clock. (Bell type Grandfather clock with Whittington chimes, manufactured in London 1845.)",49,,EC48R,"Grandfather Clock: Bell Type (London, 1845)",5,11,15.0
+07022176.wav,"Grandfather clock striking ten o'clock. (Bell type Grandfather clock with Whittington chimes, manufactured in London 1845.)",47,,EC48R,"Grandfather Clock: Bell Type (London, 1845)",4,10,15.0
+07022175.wav,"Grandfather clock striking quarter to the hour. (Bell type Grandfather clock with Whittington chimes, manufactured in London 1845.)",19,,EC48R,"Grandfather Clock: Bell Type (London, 1845)",3,-1,15.0
+07022174.wav,"Grandfather clock striking half past the hour. (Bell type Grandfather clock with Whittington chimes, manufactured in London 1845.)",16,,EC48R,"Grandfather Clock: Bell Type (London, 1845)",2,10,0.0
+07022173.wav,"Grandfather clock striking quarter past the hour. (Bell type Grandfather clock with Whittington chimes, manufactured in London 1845.)",14,,EC48R,"Grandfather Clock: Bell Type (London, 1845)",1,5,0.0
+07022172.wav,Winding alarm clock.,28,,EC48Q,Clocks,8,12,0.0
+07022171.wav,Alarm clock ringing.,31,,EC48Q,Clocks,7,-1,0.0
+07022170.wav,Alarm clock ticking.,128,,EC48Q,Clocks,6,-1,0.0
+07022169.wav,Domestic clock ticking slowly.,113,,EC48Q,Clocks,5,-1,0.0
+07022168.wav,Domestic clock ticking. (Domestic clock with Westminster chimes.),131,,EC48Q,Clocks,4,-1,0.0
+07022167.wav,Domestic clock striking nine o'clock. (Domestic clock with Westminster chimes.),49,,EC48Q,Clocks,3,9,16.0
+07022166.wav,Domestic clock striking eight o'clock. (Domestic clock with Westminster chimes.),46,,EC48Q,Clocks,2,8,16.0
+07022165.wav,Domestic clock striking seven o'clock. (Domestic clock with Westminster chimes.),45,,EC48Q,Clocks,1,7,16.0
+07022164.wav,Domestic clock striking six o'clock. (Domestic clock with Westminster chimes.),44,,EC48P,Domestic Clock: Westminster Chimes,12,6,16.0
+07022163.wav,Domestic clock striking five o'clock. (Domestic clock with Westminster chimes.),41,,EC48P,Domestic Clock: Westminster Chimes,11,5,16.0
+07022162.wav,Domestic clock striking four o'clock. (Domestic clock with Westminster chimes.),39,,EC48P,Domestic Clock: Westminster Chimes,10,4,16.0
+07022161.wav,Domestic clock striking three o'clock. (Domestic clock with Westminster chimes.),38,,EC48P,Domestic Clock: Westminster Chimes,9,3,16.0
+07022160.wav,Domestic clock striking two o'clock. (Domestic clock with Westminster chimes.),36,,EC48P,Domestic Clock: Westminster Chimes,8,2,16.0
+07022159.wav,Domestic clock striking one o'clock. (Domestic clock with Westminster chimes.),34,,EC48P,Domestic Clock: Westminster Chimes,7,1,16.0
+07022158.wav,Domestic clock striking twelve o'clock. (Domestic clock with Westminster chimes.),55,,EC48P,Domestic Clock: Westminster Chimes,6,12,16.0
+07022157.wav,Domestic clock striking eleven o'clock. (Domestic clock with Westminster chimes.),53,,EC48P,Domestic Clock: Westminster Chimes,5,11,16.0
+07022156.wav,Domestic clock striking ten o'clock. (Domestic clock with Westminster chimes.),52,,EC48P,Domestic Clock: Westminster Chimes,4,10,16.0
+07022155.wav,Domestic clock striking quarter to the hour. (Domestic clock with Westminster chimes.),23,,EC48P,Domestic Clock: Westminster Chimes,3,12,0.0
+07022154.wav,Domestic clock striking half past the hour. (Domestic clock with Westminster chimes.),18,,EC48P,Domestic Clock: Westminster Chimes,2,8,0.0
+07022153.wav,Domestic clock striking quarter past the hour. (Domestic clock with Westminster chimes.),18,,EC48P,Domestic Clock: Westminster Chimes,1,4,0.0
+07022152.wav,Domestic clock striking nine o'clock. (Nineteenth century domestic clock.),22,,EC48N,Domestic Clock (19Th Century),12,9,0.0
+07022151.wav,Domestic clock striking eight o'clock. (Nineteenth century domestic clock.),21,,EC48N,Domestic Clock (19Th Century),11,8,0.0
+07022150.wav,Domestic clock striking seven o'clock. (Nineteenth century domestic clock.),21,,EC48N,Domestic Clock (19Th Century),10,7,0.0
+07022149.wav,Domestic clock striking six o'clock. (Nineteenth century domestic clock.),20,,EC48N,Domestic Clock (19Th Century),9,6,0.0
+07022148.wav,Domestic clock striking five o'clock. (Nineteenth century domestic clock.),19,,EC48N,Domestic Clock (19Th Century),8,5,0.0
+07022147.wav,Domestic clock striking four o'clock. (Nineteenth century domestic clock.),18,,EC48N,Domestic Clock (19Th Century),7,4,0.0
+07022146.wav,Domestic clock striking three o'clock. (Nineteenth century domestic clock.),17,,EC48N,Domestic Clock (19Th Century),6,3,0.0
+07022145.wav,Domestic clock striking two o'clock. (Nineteenth century domestic clock.),16,,EC48N,Domestic Clock (19Th Century),5,2,0.0
+07022144.wav,Domestic clock striking one o'clock. (Nineteenth century domestic clock.),16,,EC48N,Domestic Clock (19Th Century),4,1,0.0
+07022143.wav,Domestic clock striking twelve o'clock. (Nineteenth century domestic clock.),25,,EC48N,Domestic Clock (19Th Century),3,12,0.0
+07022142.wav,Domestic clock striking eleven o'clock. (Nineteenth century domestic clock.),24,,EC48N,Domestic Clock (19Th Century),2,11,0.0
+07022141.wav,Domestic clock striking ten o'clock. (Nineteenth century domestic clock.),23,,EC48N,Domestic Clock (19Th Century),1,10,0.0
+07022140.wav,Domestic clock ticking.,95,,EC48M,Domestic Clock Ticking,8,-1,0.0
+07022139.wav,Domestic clock ticking.,96,,EC48M,Domestic Clock Ticking,7,-1,0.0
+07022138.wav,Domestic clock ticking.,98,,EC48M,Domestic Clock Ticking,6,-1,0.0
+07022137.wav,Domestic clock ticking.,96,,EC48M,Domestic Clock Ticking,5,-1,0.0
+07022136.wav,"Domestic clock ticking. (English domestic clock, manufactured 1810.)",121,,EC48M,Domestic Clock Ticking,4,-1,0.0
+07022135.wav,"Domestic clock striking nine o'clock. (English domestic clock, manufactured 1810.)",35,,EC48M,Domestic Clock Ticking,3,9,13.0
+07022134.wav,"Domestic clock striking eight o'clock. (English domestic clock, manufactured 1810.)",34,,EC48M,Domestic Clock Ticking,2,8,13.0
+07022133.wav,"Domestic clock striking seven o'clock. (English domestic clock, manufactured 1810.)",33,,EC48M,Domestic Clock Ticking,1,7,13.0
+07022132.wav,"Domestic clock striking six o'clock. (English domestic clock, manufactured 1810.)",32,,EC48L,"Domestic Clock (English, 1810)",12,6,13.0
+07022131.wav,"Domestic clock striking five o'clock. (English domestic clock, manufactured 1810.)",30,,EC48L,"Domestic Clock (English, 1810)",11,5,13.0
+07022130.wav,"Domestic clock striking four o'clock. (English domestic clock, manufactured 1810.)",29,,EC48L,"Domestic Clock (English, 1810)",10,4,13.0
+07022129.wav,"Domestic clock striking three o'clock. (English domestic clock, manufactured 1810.)",28,,EC48L,"Domestic Clock (English, 1810)",9,3,13.0
+07022128.wav,"Domestic clock striking two o'clock. (English domestic clock, manufactured 1810.)",27,,EC48L,"Domestic Clock (English, 1810)",8,2,13.0
+07022127.wav,"Domestic clock striking one o'clock. (English domestic clock, manufactured 1810.)",26,,EC48L,"Domestic Clock (English, 1810)",7,1,13.0
+07022126.wav,"Domestic clock striking twelve o'clock. (English domestic clock, manufactured 1810.)",38,,EC48L,"Domestic Clock (English, 1810)",6,12,13.0
+07022125.wav,"Domestic clock striking eleven o'clock. (English domestic clock, manufactured 1810.)",37,,EC48L,"Domestic Clock (English, 1810)",5,11,13.0
+07022124.wav,"Domestic clock striking ten o'clock. (English domestic clock, manufactured 1810.)",36,,EC48L,"Domestic Clock (English, 1810)",4,10,13.0
+07022123.wav,"Domestic clock striking quarter to the hour. (English domestic clock, manufactured 1810.)",34,,EC48L,"Domestic Clock (English, 1810)",3,-1,0.0
+07022122.wav,"Domestic clock striking half past the hour. (English domestic clock, manufactured 1810.)",27,,EC48L,"Domestic Clock (English, 1810)",2,-1,0.0
+07022121.wav,"Domestic clock striking quarter past the hour. (English domestic clock, manufactured 1810.)",23,,EC48L,"Domestic Clock (English, 1810)",1,8,0.0
+07022120.wav,Domestic clock striking nine o'clock. (Domestic clock with double-strike on wood.),22,,EC48K,Domestic Clock (Double-Strike On Wood),12,18,0.0
+07022119.wav,Domestic clock striking eight o'clock. (Domestic clock with double-strike on wood.),20,,EC48K,Domestic Clock (Double-Strike On Wood),11,16,0.0
+07022118.wav,Domestic clock striking seven o'clock. (Domestic clock with double-strike on wood.),18,,EC48K,Domestic Clock (Double-Strike On Wood),10,14,0.0
+07022117.wav,Domestic clock striking six o'clock. (Domestic clock with double-strike on wood.),16,,EC48K,Domestic Clock (Double-Strike On Wood),9,12,0.0
+07022116.wav,Domestic clock striking five o'clock. (Domestic clock with double-strike on wood.),14,,EC48K,Domestic Clock (Double-Strike On Wood),8,10,0.0
+07022115.wav,Domestic clock striking four o'clock. (Domestic clock with double-strike on wood.),12,,EC48K,Domestic Clock (Double-Strike On Wood),7,8,0.0
+07022114.wav,Domestic clock striking three o'clock. (Domestic clock with double-strike on wood.),10,,EC48K,Domestic Clock (Double-Strike On Wood),6,6,0.0
+07022113.wav,Domestic clock striking two o'clock. (Domestic clock with double-strike on wood.),7,,EC48K,Domestic Clock (Double-Strike On Wood),5,4,0.0
+07022112.wav,Domestic clock striking one o'clock. (Domestic clock with double-strike on wood.),6,,EC48K,Domestic Clock (Double-Strike On Wood),4,2,0.0
+07022111.wav,Domestic clock striking twelve o'clock. (Domestic clock with double-strike on wood.),28,,EC48K,Domestic Clock (Double-Strike On Wood),3,24,0.0
+07022110.wav,Domestic clock striking eleven o'clock. (Domestic clock with double-strike on wood.),26,,EC48K,Domestic Clock (Double-Strike On Wood),2,22,0.0
+07022109.wav,Domestic clock striking ten o'clock. (Domestic clock with double-strike on wood.),24,,EC48K,Domestic Clock (Double-Strike On Wood),1,20,0.0
+07022108.wav,Domestic clock striking nine o'clock. (Domestic clock with heavy double-strike mechanism.),30,,EC48J,Domestic Clock: Double-Strike (Heavy Mechanism),12,18,0.0
+07022107.wav,Domestic clock striking eight o'clock. (Domestic clock with heavy double-strike mechanism.),28,,EC48J,Domestic Clock: Double-Strike (Heavy Mechanism),11,16,0.0
+07022106.wav,Domestic clock striking seven o'clock. (Domestic clock with heavy double-strike mechanism.),26,,EC48J,Domestic Clock: Double-Strike (Heavy Mechanism),10,14,0.0
+07022105.wav,Domestic clock striking six o'clock. (Domestic clock with heavy double-strike mechanism.),25,,EC48J,Domestic Clock: Double-Strike (Heavy Mechanism),9,12,0.0
+07022104.wav,Domestic clock striking five o'clock. (Domestic clock with heavy double-strike mechanism.),23,,EC48J,Domestic Clock: Double-Strike (Heavy Mechanism),8,10,0.0
+07022103.wav,Domestic clock striking four o'clock. (Domestic clock with heavy double-strike mechanism.),20,,EC48J,Domestic Clock: Double-Strike (Heavy Mechanism),7,8,0.0
+07022102.wav,Domestic clock striking three o'clock. (Domestic clock with heavy double-strike mechanism.),19,,EC48J,Domestic Clock: Double-Strike (Heavy Mechanism),6,6,0.0
+07022101.wav,Domestic clock striking two o'clock. (Domestic clock with heavy double-strike mechanism.),17,,EC48J,Domestic Clock: Double-Strike (Heavy Mechanism),5,4,0.0
+07022100.wav,Domestic clock striking one o'clock. (Domestic clock with heavy double-strike mechanism.),15,,EC48J,Domestic Clock: Double-Strike (Heavy Mechanism),4,2,0.0
+07022099.wav,Domestic clock striking twelve o'clock. (Domestic clock with heavy double-strike mechanism.),37,,EC48J,Domestic Clock: Double-Strike (Heavy Mechanism),3,24,0.0
+07022098.wav,Domestic clock striking eleven o'clock. (Domestic clock with heavy double-strike mechanism.),34,,EC48J,Domestic Clock: Double-Strike (Heavy Mechanism),2,22,0.0
+07022097.wav,Domestic clock striking ten o'clock. (Domestic clock with heavy double-strike mechanism.),32,,EC48J,Domestic Clock: Double-Strike (Heavy Mechanism),1,20,0.0
+07022096.wav,Domestic clock striking nine o'clock. (Domestic clock with double-strike mechanism.),21,,EC48H,Domestic Clock (Bell: Double-Strike),12,9,0.0
+07022095.wav,Domestic clock striking eight o'clock. (Domestic clock with double-strike mechanism.),19,,EC48H,Domestic Clock (Bell: Double-Strike),11,8,0.0
+07022094.wav,Domestic clock striking seven o'clock. (Domestic clock with double-strike mechanism.),18,,EC48H,Domestic Clock (Bell: Double-Strike),10,7,0.0
+07022093.wav,Domestic clock striking six o'clock. (Domestic clock with double-strike mechanism.),17,,EC48H,Domestic Clock (Bell: Double-Strike),9,6,0.0
+07022092.wav,Domestic clock striking five o'clock. (Domestic clock with double-strike mechanism.),16,,EC48H,Domestic Clock (Bell: Double-Strike),8,5,0.0
+07022091.wav,Domestic clock striking four o'clock. (Domestic clock with double-strike mechanism.),15,,EC48H,Domestic Clock (Bell: Double-Strike),7,4,0.0
+07022090.wav,Domestic clock striking three o'clock. (Domestic clock with double-strike mechanism.),13,,EC48H,Domestic Clock (Bell: Double-Strike),6,3,0.0
+07022089.wav,Domestic clock striking two o'clock. (Domestic clock with double-strike mechanism.),12,,EC48H,Domestic Clock (Bell: Double-Strike),5,2,0.0
+07022088.wav,Domestic clock striking one o'clock. (Domestic clock with double-strike mechanism.),11,,EC48H,Domestic Clock (Bell: Double-Strike),4,1,0.0
+07022087.wav,Domestic clock striking twelve o'clock. (Domestic clock with double-strike mechanism.),24,,EC48H,Domestic Clock (Bell: Double-Strike),3,12,0.0
+07022086.wav,Domestic clock striking eleven o'clock. (Domestic clock with double-strike mechanism.),23,,EC48H,Domestic Clock (Bell: Double-Strike),2,11,0.0
+07022085.wav,Domestic clock striking ten o'clock. (Domestic clock with double-strike mechanism.),23,,EC48H,Domestic Clock (Bell: Double-Strike),1,10,0.0
+07022084.wav,Domestic clock striking nine o'clock. (Domestic clock with heavy gong.),29,,EC48G,Domestic Clock (Heavy Gong),12,9,0.0
+07022083.wav,Domestic clock striking eight o'clock. (Domestic clock with heavy gong.),26,,EC48G,Domestic Clock (Heavy Gong),11,8,0.0
+07022082.wav,Domestic clock striking seven o'clock. (Domestic clock with heavy gong.),25,,EC48G,Domestic Clock (Heavy Gong),10,7,0.0
+07022081.wav,Domestic clock striking six o'clock. (Domestic clock with heavy gong.),23,,EC48G,Domestic Clock (Heavy Gong),9,6,0.0
+07022080.wav,Domestic clock striking five o'clock. (Domestic clock with heavy gong.),21,,EC48G,Domestic Clock (Heavy Gong),8,5,0.0
+07022079.wav,Domestic clock striking four o'clock. (Domestic clock with heavy gong.),20,,EC48G,Domestic Clock (Heavy Gong),7,4,0.0
+07022078.wav,Domestic clock striking three o'clock. (Domestic clock with heavy gong.),17,,EC48G,Domestic Clock (Heavy Gong),6,3,0.0
+07022077.wav,Domestic clock striking two o'clock. (Domestic clock with heavy gong.),16,,EC48G,Domestic Clock (Heavy Gong),5,2,0.0
+07022076.wav,Domestic clock striking one o'clock. (Domestic clock with heavy gong.),13,,EC48G,Domestic Clock (Heavy Gong),4,1,0.0
+07022075.wav,Domestic clock striking twelve o'clock. (Domestic clock with heavy gong.),34,,EC48G,Domestic Clock (Heavy Gong),3,12,0.0
+07022074.wav,Domestic clock striking eleven o'clock. (Domestic clock with heavy gong.),32,,EC48G,Domestic Clock (Heavy Gong),2,11,0.0
+07022073.wav,Domestic clock striking ten o'clock. (Domestic clock with heavy gong.),31,,EC48G,Domestic Clock (Heavy Gong),1,10,0.0
+07022072.wav,Domestic clock striking nine o'clock. (Mid-perspective recording of domestic clock with bell.),24,,EC48F,Domestic Clock (Bell: Mid-Perspective),12,9,0.0
+07022071.wav,Domestic clock striking eight o'clock. (Mid-perspective recording of domestic clock with bell.),21,,EC48F,Domestic Clock (Bell: Mid-Perspective),11,8,0.0
+07022070.wav,Domestic clock striking seven o'clock. (Mid-perspective recording of domestic clock with bell.),19,,EC48F,Domestic Clock (Bell: Mid-Perspective),10,7,0.0
+07022069.wav,Domestic clock striking six o'clock. (Mid-perspective recording of domestic clock with bell.),18,,EC48F,Domestic Clock (Bell: Mid-Perspective),9,6,0.0
+07022068.wav,Domestic clock striking five o'clock. (Mid-perspective recording of domestic clock with bell.),16,,EC48F,Domestic Clock (Bell: Mid-Perspective),8,5,0.0
+07022067.wav,Domestic clock striking four o'clock. (Mid-perspective recording of domestic clock with bell.),14,,EC48F,Domestic Clock (Bell: Mid-Perspective),7,4,0.0
+07022066.wav,Domestic clock striking three o'clock. (Mid-perspective recording of domestic clock with bell.),12,,EC48F,Domestic Clock (Bell: Mid-Perspective),6,3,0.0
+07022065.wav,Domestic clock striking two o'clock. (Mid-perspective recording of domestic clock with bell.),11,,EC48F,Domestic Clock (Bell: Mid-Perspective),5,2,0.0
+07022064.wav,Domestic clock striking one o'clock. (Mid-perspective recording of domestic clock with bell.),8,,EC48F,Domestic Clock (Bell: Mid-Perspective),4,1,0.0
+07022063.wav,Domestic clock striking twelve o'clock. (Mid-perspective recording of domestic clock with bell.),30,,EC48F,Domestic Clock (Bell: Mid-Perspective),3,12,0.0
+07022062.wav,Domestic clock striking eleven o'clock. (Mid-perspective recording of domestic clock with bell.),28,,EC48F,Domestic Clock (Bell: Mid-Perspective),2,11,0.0
+07022061.wav,Domestic clock striking ten o'clock. (Mid-perspective recording of domestic clock with bell.),27,,EC48F,Domestic Clock (Bell: Mid-Perspective),1,10,0.0
+07022060.wav,Domestic clock striking nine o'clock. (Domestic clock with bell.),22,,EC48E,Domestic Clock (Bell),12,9,0.0
+07022059.wav,Domestic clock striking eight o'clock. (Domestic clock with bell.),21,,EC48E,Domestic Clock (Bell),11,8,0.0
+07022058.wav,Domestic clock striking seven o'clock. (Domestic clock with bell.),20,,EC48E,Domestic Clock (Bell),10,7,0.0
+07022057.wav,Domestic clock striking six o'clock. (Domestic clock with bell.),17,,EC48E,Domestic Clock (Bell),9,6,0.0
+07022056.wav,Domestic clock striking five o'clock. (Domestic clock with bell.),17,,EC48E,Domestic Clock (Bell),8,5,0.0
+07022055.wav,Domestic clock striking four o'clock. (Domestic clock with bell.),16,,EC48E,Domestic Clock (Bell),7,4,0.0
+07022054.wav,Domestic clock striking three o'clock. (Domestic clock with bell.),14,,EC48E,Domestic Clock (Bell),6,3,0.0
+07022053.wav,Domestic clock striking two o'clock. (Domestic clock with bell.),13,,EC48E,Domestic Clock (Bell),5,2,0.0
+07022052.wav,Domestic clock striking one o'clock. (Domestic clock with bell.),13,,EC48E,Domestic Clock (Bell),4,1,0.0
+07022051.wav,Domestic clock striking twelve o'clock. (Domestic clock with bell.),25,,EC48E,Domestic Clock (Bell),3,12,0.0
+07022050.wav,Domestic clock striking eleven o'clock. (Domestic clock with bell.),25,,EC48E,Domestic Clock (Bell),2,11,0.0
+07022049.wav,Domestic clock striking ten o'clock. (Domestic clock with bell.),25,,EC48E,Domestic Clock (Bell),1,10,0.0
+07022048.wav,Domestic clock striking nine o'clock. (Domestic clock with bell & heavy machanism.),31,,EC48D,Domestic Clock (Bell: Heavy Mechanism),12,9,0.0
+07022047.wav,Domestic clock striking eight o'clock. (Domestic clock with bell & heavy machanism.),28,,EC48D,Domestic Clock (Bell: Heavy Mechanism),11,8,0.0
+07022046.wav,Domestic clock striking seven o'clock. (Domestic clock with bell & heavy machanism.),24,,EC48D,Domestic Clock (Bell: Heavy Mechanism),10,7,0.0
+07022045.wav,Domestic clock striking six o'clock. (Domestic clock with bell & heavy machanism.),23,,EC48D,Domestic Clock (Bell: Heavy Mechanism),9,6,0.0
+07022044.wav,Domestic clock striking five o'clock. (Domestic clock with bell & heavy machanism.),20,,EC48D,Domestic Clock (Bell: Heavy Mechanism),8,5,0.0
+07022043.wav,Domestic clock striking four o'clock. (Domestic clock with bell & heavy machanism.),18,,EC48D,Domestic Clock (Bell: Heavy Mechanism),7,4,0.0
+07022042.wav,Domestic clock striking three o'clock. (Domestic clock with bell & heavy machanism.),14,,EC48D,Domestic Clock (Bell: Heavy Mechanism),6,3,0.0
+07022041.wav,Domestic clock striking two o'clock. (Domestic clock with bell & heavy machanism.),13,,EC48D,Domestic Clock (Bell: Heavy Mechanism),5,2,0.0
+07022040.wav,Domestic clock striking one o'clock. (Domestic clock with bell & heavy machanism.),10,,EC48D,Domestic Clock (Bell: Heavy Mechanism),4,1,0.0
+07022039.wav,Domestic clock striking twelve o'clock. (Domestic clock with bell & heavy machanism.),37,,EC48D,Domestic Clock (Bell: Heavy Mechanism),3,12,0.0
+07022038.wav,Domestic clock striking eleven o'clock. (Domestic clock with bell & heavy machanism.),34,,EC48D,Domestic Clock (Bell: Heavy Mechanism),2,11,0.0
+07022037.wav,Domestic clock striking ten o'clock. (Domestic clock with bell & heavy machanism.),32,,EC48D,Domestic Clock (Bell: Heavy Mechanism),1,10,0.0
+07022036.wav,Domestic clock striking nine o'clock. (Domestic clock with bell.),19,,EC48C,Domestic Clock (Bell),12,9,0.0
+07022035.wav,Domestic clock striking eight o'clock. (Domestic clock with bell.),18,,EC48C,Domestic Clock (Bell),11,8,0.0
+07022034.wav,Domestic clock striking seven o'clock. (Domestic clock with bell.),16,,EC48C,Domestic Clock (Bell),10,7,0.0
+07022033.wav,Domestic clock striking six o'clock. (Domestic clock with bell.),15,,EC48C,Domestic Clock (Bell),9,6,0.0
+07022032.wav,Domestic clock striking five o'clock. (Domestic clock with bell.),14,,EC48C,Domestic Clock (Bell),8,5,0.0
+07022031.wav,Domestic clock striking four o'clock. (Domestic clock with bell.),13,,EC48C,Domestic Clock (Bell),7,4,0.0
+07022030.wav,Domestic clock striking three o'clock. (Domestic clock with bell.),11,,EC48C,Domestic Clock (Bell),6,3,0.0
+07022029.wav,Domestic clock striking two o'clock. (Domestic clock with bell.),9,,EC48C,Domestic Clock (Bell),5,2,0.0
+07022028.wav,Domestic clock striking one o'clock. (Domestic clock with bell.),7,,EC48C,Domestic Clock (Bell),4,1,0.0
+07022027.wav,Domestic clock striking twelve o'clock. (Domestic clock with bell.),23,,EC48C,Domestic Clock (Bell),3,12,0.0
+07022026.wav,Domestic clock striking eleven o'clock. (Domestic clock with bell.),21,,EC48C,Domestic Clock (Bell),2,11,0.0
+07022025.wav,Domestic clock striking ten o'clock. (Domestic clock with bell.),20,,EC48C,Domestic Clock (Bell),1,10,0.0
+07022024.wav,Domestic clock striking nine o'clock. (Domestic clock with single-strike mechanism.),30,,EC48B,Domestic Clock,12,9,0.0
+07022023.wav,Domestic clock striking eight o'clock. (Domestic clock with single-strike mechanism.),28,,EC48B,Domestic Clock,11,8,0.0
+07022022.wav,Domestic clock striking seven o'clock. (Domestic clock with single-strike mechanism.),26,,EC48B,Domestic Clock,10,7,0.0
+07022021.wav,Domestic clock striking six o'clock. (Domestic clock with single-strike mechanism.),24,,EC48B,Domestic Clock,9,6,0.0
+07022020.wav,Domestic clock striking five o'clock. (Domestic clock with single-strike mechanism.),22,,EC48B,Domestic Clock,8,5,0.0
+07022019.wav,Domestic clock striking four o'clock. (Domestic clock with single-strike mechanism.),20,,EC48B,Domestic Clock,7,4,0.0
+07022018.wav,Domestic clock striking three o'clock. (Domestic clock with single-strike mechanism.),16,,EC48B,Domestic Clock,6,3,0.0
+07022017.wav,Domestic clock striking two o'clock. (Domestic clock with single-strike mechanism.),16,,EC48B,Domestic Clock,5,2,0.0
+07022016.wav,Domestic clock striking one o'clock. (Domestic clock with single-strike mechanism.),13,,EC48B,Domestic Clock,4,1,0.0
+07022015.wav,Domestic clock striking twelve o'clock. (Domestic clock with single-strike mechanism.),38,,EC48B,Domestic Clock,3,12,0.0
+07022014.wav,Domestic clock striking eleven o'clock. (Domestic clock with single-strike mechanism.),35,,EC48B,Domestic Clock,2,11,0.0
+07022013.wav,Domestic clock striking ten o'clock. (Domestic clock with single-strike mechanism.),33,,EC48B,Domestic Clock,1,10,0.0
+07022012.wav,Domestic clock striking nine o'clock. (Domestic clock with double-strike mechanism.),35,,EC48A,Domestic Clock: Double-Strike,12,18,0.0
+07022011.wav,Domestic clock striking eight o'clock. (Domestic clock with double-strike mechanism.),32,,EC48A,Domestic Clock: Double-Strike,11,16,0.0
+07022010.wav,Domestic clock striking seven o'clock. (Domestic clock with double-strike mechanism.),30,,EC48A,Domestic Clock: Double-Strike,10,14,0.0
+07022009.wav,Domestic clock striking six o'clock. (Domestic clock with double-strike mechanism.),37,,EC48A,Domestic Clock: Double-Strike,9,12,0.0
+07022008.wav,Domestic clock striking five o'clock. (Domestic clock with double-strike mechanism.),27,,EC48A,Domestic Clock: Double-Strike,8,10,0.0
+07022007.wav,Domestic clock striking four o'clock. (Domestic clock with double-strike mechanism.),23,,EC48A,Domestic Clock: Double-Strike,7,8,0.0
+07022006.wav,Domestic clock striking three o'clock. (Domestic clock with double-strike mechanism.),20,,EC48A,Domestic Clock: Double-Strike,6,6,0.0
+07022005.wav,Domestic clock striking two o'clock. (Domestic clock with double-strike mechanism.),18,,EC48A,Domestic Clock: Double-Strike,5,4,0.0
+07022004.wav,Domestic clock striking one o'clock. (Domestic clock with double-strike mechanism.),15,,EC48A,Domestic Clock: Double-Strike,4,2,0.0
+07022003.wav,Domestic clock striking twelve o'clock. (Domestic clock with double-strike mechanism.),43,,EC48A,Domestic Clock: Double-Strike,3,24,0.0
+07022002.wav,Domestic clock striking eleven o'clock. (Domestic clock with double-strike mechanism.),40,,EC48A,Domestic Clock: Double-Strike,2,22,0.0
+07022001.wav,Domestic clock striking ten o'clock. (Domestic clock with double-strike mechanism.),37,,EC48A,Domestic Clock: Double-Strike,1,20,0.0
+07016234.wav,"Big Tom, bell in Christchurch College clock, striking 101 times.",291,,EC36X,"Christchurch College Clock, Oxford",5,101,0.0
+07016233.wav,Christchurch College clock striking twelve o'clock.,66,,EC36X,"Christchurch College Clock, Oxford",4,12,0.0
+07016232.wav,Christchurch College clock striking eleven o'clock.,62,,EC36X,"Christchurch College Clock, Oxford",3,11,0.0
+07016231.wav,Christchurch College clock striking ten o'clock.,58,,EC36X,"Christchurch College Clock, Oxford",2,10,0.0
+07016230.wav,Christchurch College clock striking nine o'clock.,55,,EC36X,"Christchurch College Clock, Oxford",1,9,0.0
+07016229.wav,Christchurch College clock striking eight o'clock.,51,,EC36W,"Christchurch College Clock, Oxford",11,8,0.0
+07016228.wav,Christchurch College clock striking seven o'clock.,48,,EC36W,"Christchurch College Clock, Oxford",10,7,0.0
+07016227.wav,Christchurch College clock striking six o'clock.,44,,EC36W,"Christchurch College Clock, Oxford",9,6,0.0
+07016226.wav,Christchurch College clock striking five o'clock.,40,,EC36W,"Christchurch College Clock, Oxford",8,5,0.0
+07016225.wav,Christchurch College clock striking four o'clock.,37,,EC36W,"Christchurch College Clock, Oxford",7,4,0.0
+07016224.wav,Christchurch College clock striking three o'clock.,33,,EC36W,"Christchurch College Clock, Oxford",6,3,0.0
+07016223.wav,Christchurch College clock striking two o'clock.,29,,EC36W,"Christchurch College Clock, Oxford",5,2,0.0
+07016222.wav,Christchurch College clock striking one o'clock.,31,,EC36W,"Christchurch College Clock, Oxford",4,1,0.0
+07016221.wav,New College clock striking twelve o'clock.,61,,EC36W,"Christchurch College Clock, Oxford",3,12,10.0
+07016220.wav,New College clock striking eleven o'clock.,58,,EC36W,"Christchurch College Clock, Oxford",2,11,10.0
+07016219.wav,New College clock striking ten o'clock.,56,,EC36W,"Christchurch College Clock, Oxford",1,10,10.0
+07016218.wav,New College clock striking nine o'clock.,54,,EC36V,"New College Clock, Oxford",12,9,10.0
+07016217.wav,New College clock striking eight o'clock.,54,,EC36V,"New College Clock, Oxford",11,8,10.0
+07016216.wav,New College clock striking seven o'clock.,52,,EC36V,"New College Clock, Oxford",10,7,10.0
+07016215.wav,New College clock striking six o'clock.,49,,EC36V,"New College Clock, Oxford",9,6,10.0
+07016214.wav,New College clock striking five o'clock.,47,,EC36V,"New College Clock, Oxford",8,5,10.0
+07016213.wav,New College clock striking four o'clock.,45,,EC36V,"New College Clock, Oxford",7,4,10.0
+07016212.wav,New College clock striking three o'clock.,43,,EC36V,"New College Clock, Oxford",6,3,10.0
+07016211.wav,New College clock striking two o'clock.,41,,EC36V,"New College Clock, Oxford",5,2,10.0
+07016210.wav,New College clock striking one o'clock.,35,,EC36V,"New College Clock, Oxford",4,1,10.0
+07016209.wav,New College clock striking quarter to the hour.,25,,EC36V,"New College Clock, Oxford",3,6,0.0
+07016208.wav,New College clock striking half past the hour.,22,,EC36V,"New College Clock, Oxford",2,4,0.0
+07016207.wav,New College clock striking quarter past the hour.,19,,EC36V,"New College Clock, Oxford",1,2,0.0
+07016206.wav,Balliol College clock striking twelve o'clock.,38,,EC36U,"Balliol College Clock, Oxford",12,12,0.0
+07016205.wav,Balliol College clock striking eleven o'clock.,36,,EC36U,"Balliol College Clock, Oxford",11,11,0.0
+07016204.wav,Balliol College clock striking ten o'clock.,34,,EC36U,"Balliol College Clock, Oxford",10,10,0.0
+07016203.wav,Balliol College clock striking nine o'clock.,30,,EC36U,"Balliol College Clock, Oxford",9,9,0.0
+07016202.wav,Balliol College clock striking eight o'clock.,29,,EC36U,"Balliol College Clock, Oxford",8,8,0.0
+07016201.wav,Balliol College clock striking seven o'clock.,27,,EC36U,"Balliol College Clock, Oxford",7,7,0.0
+07016200.wav,Balliol College clock striking six o'clock.,25,,EC36U,"Balliol College Clock, Oxford",6,6,0.0
+07016199.wav,Balliol College clock striking five o'clock.,24,,EC36U,"Balliol College Clock, Oxford",5,5,0.0
+07016198.wav,Balliol College clock striking four o'clock.,21,,EC36U,"Balliol College Clock, Oxford",4,4,0.0
+07016197.wav,Balliol College clock striking three o'clock.,20,,EC36U,"Balliol College Clock, Oxford",3,3,0.0
+07016196.wav,Balliol College clock striking two o'clock.,16,,EC36U,"Balliol College Clock, Oxford",2,2,0.0
+07016195.wav,Balliol College clock striking one o'clock.,14,,EC36U,"Balliol College Clock, Oxford",1,1,0.0
+07016194.wav,Trinity & St John's College clock striking twelve o'clock. (Trinity clock strikes a second time for St. John's College.),65,,EC36T,"Trinity & St. John’S College Clock, Cambridge",12,12,30.0
+07016193.wav,Trinity & St John's College clock striking eleven o'clock. (Trinity clock strikes a second time for St. John's College.),61,,EC36T,"Trinity & St. John’S College Clock, Cambridge",11,11,27.5
+07016192.wav,Trinity & St John's College clock striking ten o'clock. (Trinity clock strikes a second time for St. John's College.),57,,EC36T,"Trinity & St. John’S College Clock, Cambridge",10,10,26.0
+07016191.wav,Trinity & St John's College clock striking nine o'clock. (Trinity clock strikes a second time for St. John's College.),55,,EC36T,"Trinity & St. John’S College Clock, Cambridge",9,9,25.0
+07016190.wav,Trinity & St John's College clock striking eight o'clock. (Trinity clock strikes a second time for St. John's College.),51,,EC36T,"Trinity & St. John’S College Clock, Cambridge",8,8,23.0
+07016189.wav,Trinity & St John's College clock striking seven o'clock. (Trinity clock strikes a second time for St. John's College.),49,,EC36T,"Trinity & St. John’S College Clock, Cambridge",7,7,22.0
+07016188.wav,Trinity & St John's College clock striking six o'clock. (Trinity clock strikes a second time for St. John's College.),45,,EC36T,"Trinity & St. John’S College Clock, Cambridge",6,6,21.0
+07016187.wav,Trinity & St John's College clock striking five o'clock. (Trinity clock strikes a second time for St. John's College.),44,,EC36T,"Trinity & St. John’S College Clock, Cambridge",5,5,19.5
+07016186.wav,Trinity & St John's College clock striking four o'clock. (Trinity clock strikes a second time for St. John's College.),40,,EC36T,"Trinity & St. John’S College Clock, Cambridge",4,4,18.0
+07016185.wav,Trinity & St John's College clock striking three o'clock. (Trinity clock strikes a second time for St. John's College.),36,,EC36T,"Trinity & St. John’S College Clock, Cambridge",3,3,16.0
+07016184.wav,Trinity & St John's College clock striking two o'clock. (Trinity clock strikes a second time for St. John's College.),35,,EC36T,"Trinity & St. John’S College Clock, Cambridge",2,2,14.5
+07016183.wav,Trinity & St John's College clock striking one o'clock. (Trinity clock strikes a second time for St. John's College.),30,,EC36T,"Trinity & St. John’S College Clock, Cambridge",1,1,14.0
+07016182.wav,Trinity & St John's College clock striking quarter to the hour. (Trinity clock strikes a second time for St. John's College.),21,,EC36S,Cambridge Clocks,12,6,0.0
+07016181.wav,Trinity & St John's College clock striking half past the hour. (Trinity clock strikes a second time for St. John's College.),22,,EC36S,Cambridge Clocks,11,4,0.0
+07016180.wav,Trinity & St John's College clock striking quarter past the hour. (Trinity clock strikes a second time for St. John's College.),20,,EC36S,Cambridge Clocks,10,2,0.0
+07016179.wav,Caius College clock striking twelve o'clock.,55,,EC36S,Cambridge Clocks,9,12,8.0
+07016178.wav,Caius College clock striking eleven o'clock.,50,,EC36S,Cambridge Clocks,8,11,8.0
+07016177.wav,Caius College clock striking ten o'clock.,47,,EC36S,Cambridge Clocks,7,10,8.0
+07016176.wav,Caius College clock striking nine o'clock.,45,,EC36S,Cambridge Clocks,6,9,8.0
+07016175.wav,Caius College clock striking eight o'clock.,42,,EC36S,Cambridge Clocks,5,8,8.0
+07016174.wav,Caius College clock striking seven o'clock.,40,,EC36S,Cambridge Clocks,4,7,8.0
+07016173.wav,Caius College clock striking six o'clock.,38,,EC36S,Cambridge Clocks,3,6,8.0
+07016172.wav,Caius College clock striking five o'clock.,35,,EC36S,Cambridge Clocks,2,5,8.0
+07016171.wav,Caius College clock striking four o'clock.,35,,EC36S,Cambridge Clocks,1,4,8.0
+07016170.wav,Caius College clock striking three o'clock.,31,,EC36R,"Caius College Clock, Cambridge",10,3,8.0
+07016169.wav,Caius College clock striking two o'clock.,27,,EC36R,"Caius College Clock, Cambridge",9,2,8.0
+07016168.wav,Caius College clock striking one o'clock.,27,,EC36R,"Caius College Clock, Cambridge",8,1,8.0
+07016167.wav,Caius College clock striking quarter to the hour.,19,,EC36R,"Caius College Clock, Cambridge",7,6,0.0
+07016166.wav,Caius College clock striking half past the hour.,19,,EC36R,"Caius College Clock, Cambridge",6,4,0.0
+07016165.wav,Caius College clock striking quarter past the hour.,17,,EC36R,"Caius College Clock, Cambridge",5,2,0.0
+07016164.wav,Keble College clock striking twelve o'clock.,72,,EC36R,"Caius College Clock, Cambridge",4,12,25.0
+07016163.wav,Keble College clock striking eleven o'clock.,70,,EC36R,"Caius College Clock, Cambridge",3,11,25.0
+07016162.wav,Keble College clock striking ten o'clock.,68,,EC36R,"Caius College Clock, Cambridge",2,10,25.0
+07016161.wav,Keble College clock striking nine o'clock.,64,,EC36R,"Caius College Clock, Cambridge",1,9,25.0
+07016160.wav,Keble College clock striking eight o'clock.,64,,EC36Q,"Keble College Clock, Oxford ",11,8,25.0
+07016159.wav,Keble College clock striking seven o'clock.,61,,EC36Q,"Keble College Clock, Oxford ",10,7,25.0
+07016158.wav,Keble College clock striking six o'clock.,59,,EC36Q,"Keble College Clock, Oxford ",9,6,25.0
+07016157.wav,Keble College clock striking five o'clock.,56,,EC36Q,"Keble College Clock, Oxford ",8,5,25.0
+07016156.wav,Keble College clock striking four o'clock.,53,,EC36Q,"Keble College Clock, Oxford ",7,4,25.0
+07016155.wav,Keble College clock striking three o'clock.,51,,EC36Q,"Keble College Clock, Oxford ",6,3,25.0
+07016154.wav,Keble College clock striking two o'clock.,49,,EC36Q,"Keble College Clock, Oxford ",5,2,25.0
+07016153.wav,Keble College clock striking one o'clock.,46,,EC36Q,"Keble College Clock, Oxford ",4,1,25.0
+07016152.wav,Keble College clock striking quarter to the hour.,19,,EC36Q,"Keble College Clock, Oxford ",3,6,0.0
+07016151.wav,Keble College clock striking half past the hour.,23,,EC36Q,"Keble College Clock, Oxford ",2,4,0.0
+07016150.wav,Keble College clock striking quarter past the hour.,24,,EC36Q,"Keble College Clock, Oxford ",1,2,0.0
+07016149.wav,Wadham College clock striking nine o'clock.,19,,EC36P,"Wadham College Clock, Oxford",12,9,0.0
+07016148.wav,Wadham College clock striking eight o'clock.,17,,EC36P,"Wadham College Clock, Oxford",11,8,0.0
+07016147.wav,Wadham College clock striking seven o'clock.,17,,EC36P,"Wadham College Clock, Oxford",10,7,0.0
+07016146.wav,Wadham College clock striking six o'clock.,16,,EC36P,"Wadham College Clock, Oxford",9,6,0.0
+07016145.wav,Wadham College clock striking five o'clock.,14,,EC36P,"Wadham College Clock, Oxford",8,5,0.0
+07016144.wav,Wadham College clock striking four o'clock.,14,,EC36P,"Wadham College Clock, Oxford",7,4,0.0
+07016143.wav,Wadham College clock striking three o'clock.,13,,EC36P,"Wadham College Clock, Oxford",6,3,0.0
+07016142.wav,Wadham College clock striking two o'clock.,12,,EC36P,"Wadham College Clock, Oxford",5,2,0.0
+07016141.wav,Wadham College clock striking one o'clock.,11,,EC36P,"Wadham College Clock, Oxford",4,1,0.0
+07016140.wav,Wadham College clock striking twelve o'clock.,22,,EC36P,"Wadham College Clock, Oxford",3,12,0.0
+07016139.wav,Wadham College clock striking eleven o'clock.,20,,EC36P,"Wadham College Clock, Oxford",2,11,0.0
+07016138.wav,Wadham College clock striking ten o'clock.,20,,EC36P,"Wadham College Clock, Oxford",1,10,0.0
+07016137.wav,Lincoln College clock striking nine o'clock.,27,,EC36N,"Lincoln College Clock, Oxford",12,9,0.0
+07016136.wav,Lincoln College clock striking eight o'clock.,25,,EC36N,"Lincoln College Clock, Oxford",11,8,0.0
+07016135.wav,Lincoln College clock striking seven o'clock.,23,,EC36N,"Lincoln College Clock, Oxford",10,7,0.0
+07016134.wav,Lincoln College clock striking six o'clock.,22,,EC36N,"Lincoln College Clock, Oxford",9,6,0.0
+07016133.wav,Lincoln College clock striking five o'clock.,19,,EC36N,"Lincoln College Clock, Oxford",8,5,0.0
+07016132.wav,Lincoln College clock striking four o'clock.,18,,EC36N,"Lincoln College Clock, Oxford",7,4,0.0
+07016131.wav,Lincoln College clock striking three o'clock.,16,,EC36N,"Lincoln College Clock, Oxford",6,3,0.0
+07016130.wav,Lincoln College clock striking two o'clock.,14,,EC36N,"Lincoln College Clock, Oxford",5,2,0.0
+07016129.wav,Lincoln College clock striking one o'clock.,11,,EC36N,"Lincoln College Clock, Oxford",4,1,0.0
+07016128.wav,Lincoln College clock striking twelve o'clock.,33,,EC36N,"Lincoln College Clock, Oxford",3,12,0.0
+07016127.wav,Lincoln College clock striking eleven o'clock.,32,,EC36N,"Lincoln College Clock, Oxford",2,11,0.0
+07016126.wav,Lincoln College clock striking ten o'clock.,30,,EC36N,"Lincoln College Clock, Oxford",1,10,0.0
+07016125.wav,Jesus College clock striking nine o'clock.,27,,EC36M,"Jesus College Clock, Oxford",12,9,0.0
+07016124.wav,Jesus College clock striking eight o'clock.,25,,EC36M,"Jesus College Clock, Oxford",11,8,0.0
+07016123.wav,Jesus College clock striking seven o'clock.,22,,EC36M,"Jesus College Clock, Oxford",10,7,0.0
+07016122.wav,Jesus College clock striking six o'clock.,20,,EC36M,"Jesus College Clock, Oxford",9,6,0.0
+07016121.wav,Jesus College clock striking five o'clock.,18,,EC36M,"Jesus College Clock, Oxford",8,5,0.0
+07016120.wav,Jesus College clock striking four o'clock.,16,,EC36M,"Jesus College Clock, Oxford",7,4,0.0
+07016119.wav,Jesus College clock striking three o'clock.,14,,EC36M,"Jesus College Clock, Oxford",6,3,0.0
+07016118.wav,Jesus College clock striking two o'clock.,13,,EC36M,"Jesus College Clock, Oxford",5,2,0.0
+07016117.wav,Jesus College clock striking one o'clock.,10,,EC36M,"Jesus College Clock, Oxford",4,1,0.0
+07016116.wav,Jesus College clock striking twelve o'clock.,33,,EC36M,"Jesus College Clock, Oxford",3,12,0.0
+07016115.wav,Jesus College clock striking eleven o'clock.,30,,EC36M,"Jesus College Clock, Oxford",2,11,0.0
+07016114.wav,Jesus College clock striking ten o'clock.,28,,EC36M,"Jesus College Clock, Oxford",1,10,0.0
+07016113.wav,Worcester College clock striking nine o'clock.,29,,EC36L,"Worcester College Clock, Oxford",12,9,0.0
+07016112.wav,Worcester College clock striking eight o'clock.,26,,EC36L,"Worcester College Clock, Oxford",11,8,0.0
+07016111.wav,Worcester College clock striking seven o'clock.,24,,EC36L,"Worcester College Clock, Oxford",10,7,0.0
+07016110.wav,Worcester College clock striking six o'clock.,22,,EC36L,"Worcester College Clock, Oxford",9,6,0.0
+07016109.wav,Worcester College clock striking five o'clock.,19,,EC36L,"Worcester College Clock, Oxford",8,5,0.0
+07016108.wav,Worcester College clock striking four o'clock.,17,,EC36L,"Worcester College Clock, Oxford",7,4,0.0
+07016107.wav,Worcester College clock striking three o'clock.,15,,EC36L,"Worcester College Clock, Oxford",6,3,0.0
+07016106.wav,Worcester College clock striking two o'clock.,12,,EC36L,"Worcester College Clock, Oxford",5,2,0.0
+07016105.wav,Worcester College clock striking one o'clock.,10,,EC36L,"Worcester College Clock, Oxford",4,1,0.0
+07016104.wav,Worcester College clock striking twelve o'clock.,35,,EC36L,"Worcester College Clock, Oxford",3,12,0.0
+07016103.wav,Worcester College clock striking eleven o'clock.,33,,EC36L,"Worcester College Clock, Oxford",2,11,0.0
+07016102.wav,Worcester College clock striking ten o'clock.,31,,EC36L,"Worcester College Clock, Oxford",1,10,0.0
+07016101.wav,"University College, Oxford clock striking nine o'clock.",33,,EC36K,"University College Clock, Oxford",12,9,0.0
+07016100.wav,"University College, Oxford clock striking eight o'clock.",29,,EC36K,"University College Clock, Oxford",11,8,0.0
+07016099.wav,"University College, Oxford clock striking seven o'clock.",24,,EC36K,"University College Clock, Oxford",10,7,0.0
+07016098.wav,"University College, Oxford clock striking six o'clock.",22,,EC36K,"University College Clock, Oxford",9,6,0.0
+07016097.wav,"University College, Oxford clock striking five o'clock.",21,,EC36K,"University College Clock, Oxford",8,5,0.0
+07016096.wav,"University College, Oxford clock striking four o'clock.",17,,EC36K,"University College Clock, Oxford",7,4,0.0
+07016095.wav,"University College, Oxford clock striking three o'clock.",14,,EC36K,"University College Clock, Oxford",6,3,0.0
+07016094.wav,"University College, Oxford clock striking two o'clock.",10,,EC36K,"University College Clock, Oxford",5,2,0.0
+07016093.wav,"University College, Oxford clock striking one o'clock.",11,,EC36K,"University College Clock, Oxford",4,1,0.0
+07016092.wav,"University College, Oxford clock striking twelve o'clock.",42,,EC36K,"University College Clock, Oxford",3,12,0.0
+07016091.wav,"University College, Oxford clock striking eleven o'clock.",39,,EC36K,"University College Clock, Oxford",2,11,0.0
+07016090.wav,"University College, Oxford clock striking ten o'clock.",36,,EC36K,"University College Clock, Oxford",1,10,0.0
+07016089.wav,Oriel College clock striking nine o'clock.,23,,EC36J,"Oriel College Clock, Oxford",12,9,0.0
+07016088.wav,Oriel College clock striking eight o'clock.,21,,EC36J,"Oriel College Clock, Oxford",11,8,0.0
+07016087.wav,Oriel College clock striking seven o'clock.,19,,EC36J,"Oriel College Clock, Oxford",10,7,0.0
+07016086.wav,Oriel College clock striking six o'clock.,18,,EC36J,"Oriel College Clock, Oxford",9,6,0.0
+07016085.wav,Oriel College clock striking five o'clock.,16,,EC36J,"Oriel College Clock, Oxford",8,5,0.0
+07016084.wav,Oriel College clock striking four o'clock.,14,,EC36J,"Oriel College Clock, Oxford",7,4,0.0
+07016083.wav,Oriel College clock striking three o'clock.,14,,EC36J,"Oriel College Clock, Oxford",6,3,0.0
+07016082.wav,Oriel College clock striking two o'clock.,12,,EC36J,"Oriel College Clock, Oxford",5,2,0.0
+07016081.wav,Oriel College clock striking one o'clock.,9,,EC36J,"Oriel College Clock, Oxford",4,1,0.0
+07016080.wav,Oriel College clock striking twelve o'clock.,27,,EC36J,"Oriel College Clock, Oxford",3,12,0.0
+07016079.wav,Oriel College clock striking eleven o'clock.,25,,EC36J,"Oriel College Clock, Oxford",2,11,0.0
+07016078.wav,Oriel College clock striking ten o'clock.,24,,EC36J,"Oriel College Clock, Oxford",1,10,0.0
+07016077.wav,Oriel College clock ticking.,166,,EC36H,Oxford College Clocks Ticking,6,-1,0.0
+07016076.wav,Trinity College clock ticking.,184,,EC36H,Oxford College Clocks Ticking,5,-1,0.0
+07016075.wav,Trinity College clock striking twelve o'clock.,40,,EC36H,Oxford College Clocks Ticking,4,12,8.0
+07016074.wav,Trinity College clock striking eleven o'clock.,38,,EC36H,Oxford College Clocks Ticking,3,11,8.0
+07016073.wav,Trinity College clock striking ten o'clock.,36,,EC36H,Oxford College Clocks Ticking,2,10,8.0
+07016072.wav,Trinity College clock striking nine o'clock.,35,,EC36H,Oxford College Clocks Ticking,1,9,8.0
+07016071.wav,Trinity College clock striking eight o'clock.,33,,EC36G,"Trinity College Clock, Oxford",11,8,8.0
+07016070.wav,Trinity College clock striking seven o'clock.,30,,EC36G,"Trinity College Clock, Oxford",10,7,8.0
+07016069.wav,Trinity College clock striking six o'clock.,28,,EC36G,"Trinity College Clock, Oxford",9,6,8.0
+07016068.wav,Trinity College clock striking five o'clock.,26,,EC36G,"Trinity College Clock, Oxford",8,5,8.0
+07016067.wav,Trinity College clock striking four o'clock.,24,,EC36G,"Trinity College Clock, Oxford",7,4,8.0
+07016066.wav,Trinity College clock striking three o'clock.,23,,EC36G,"Trinity College Clock, Oxford",6,3,8.0
+07016065.wav,Trinity College clock striking two o'clock.,20,,EC36G,"Trinity College Clock, Oxford",5,2,8.0
+07016064.wav,Trinity College clock striking one o'clock.,18,,EC36G,"Trinity College Clock, Oxford",4,1,8.0
+07016063.wav,Trinity College clock striking quarter to the hour.,14,,EC36G,"Trinity College Clock, Oxford",3,6,0.0
+07016062.wav,Trinity College clock striking half past the hour.,10,,EC36G,"Trinity College Clock, Oxford",2,4,0.0
+07016061.wav,Trinity College clock striking quarter past the hour.,10,,EC36G,"Trinity College Clock, Oxford",1,2,0.0
+07016060.wav,"Clock of the University Church of St Mary the Virgin, Oxford striking twelve o'clock.",62,,EC36F,"University Of St. Mary The Virgin Church Clock, Oxford",9,12,10.0
+07016059.wav,"Clock of the University Church of St Mary the Virgin, Oxford striking eleven o'clock.",59,,EC36F,"University Of St. Mary The Virgin Church Clock, Oxford",8,11,10.0
+07016058.wav,"Clock of the University Church of St Mary the Virgin, Oxford striking ten o'clock.",56,,EC36F,"University Of St. Mary The Virgin Church Clock, Oxford",7,10,10.0
+07016057.wav,"Clock of the University Church of St Mary the Virgin, Oxford striking nine o'clock.",52,,EC36F,"University Of St. Mary The Virgin Church Clock, Oxford",6,9,10.0
+07016056.wav,"Clock of the University Church of St Mary the Virgin, Oxford striking eight o'clock.",50,,EC36F,"University Of St. Mary The Virgin Church Clock, Oxford",5,8,10.0
+07016055.wav,"Clock of the University Church of St Mary the Virgin, Oxford striking seven o'clock.",48,,EC36F,"University Of St. Mary The Virgin Church Clock, Oxford",4,7,10.0
+07016054.wav,"Clock of the University Church of St Mary the Virgin, Oxford striking six o'clock.",44,,EC36F,"University Of St. Mary The Virgin Church Clock, Oxford",3,6,10.0
+07016053.wav,"Clock of the University Church of St Mary the Virgin, Oxford striking five o'clock.",41,,EC36F,"University Of St. Mary The Virgin Church Clock, Oxford",2,5,10.0
+07016052.wav,"Clock of the University Church of St Mary the Virgin, Oxford striking four o'clock.",39,,EC36F,"University Of St. Mary The Virgin Church Clock, Oxford",1,4,10.0
+07016051.wav,"Clock of the University Church of St Mary the Virgin, Oxford striking three o'clock.",36,,EC36E,"University Of St. Mary The Virgin Church Clock, Oxford",10,3,10.0
+07016050.wav,"Clock of the University Church of St Mary the Virgin, Oxford striking two o'clock.",33,,EC36E,"University Of St. Mary The Virgin Church Clock, Oxford",9,2,10.0
+07016049.wav,"Clock of the University Church of St Mary the Virgin, Oxford striking one o'clock.",30,,EC36E,"University Of St. Mary The Virgin Church Clock, Oxford",8,1,10.0
+07016048.wav,"Clock of the University Church of St Mary the Virgin, Oxford striking quarter to the hour.",18,,EC36E,"University Of St. Mary The Virgin Church Clock, Oxford",7,3,0.0
+07016047.wav,"Clock of the University Church of St Mary the Virgin, Oxford striking half past the hour.",17,,EC36E,"University Of St. Mary The Virgin Church Clock, Oxford",6,2,0.0
+07016046.wav,"Clock of the University Church of St Mary the Virgin, Oxford striking quarter past the hour.",12,,EC36E,"University Of St. Mary The Virgin Church Clock, Oxford",5,1,0.0
+07016045.wav,Queens College clock striking twelve o'clock.,56,,EC36E,"University Of St. Mary The Virgin Church Clock, Oxford",4,12,10.0
+07016044.wav,Queens College clock striking eleven o'clock.,52,,EC36E,"University Of St. Mary The Virgin Church Clock, Oxford",3,11,10.0
+07016043.wav,Queens College clock striking ten o'clock.,51,,EC36E,"University Of St. Mary The Virgin Church Clock, Oxford",2,10,10.0
+07016042.wav,Queens College clock striking nine o'clock.,46,,EC36E,"University Of St. Mary The Virgin Church Clock, Oxford",1,9,10.0
+07016041.wav,Queens College clock striking eight o'clock.,44,,EC36D,"Queens College Clock, Oxford",11,8,10.0
+07016040.wav,Queens College clock striking seven o'clock.,41,,EC36D,"Queens College Clock, Oxford",10,7,10.0
+07016039.wav,Queens College clock striking six o'clock.,38,,EC36D,"Queens College Clock, Oxford",9,6,10.0
+07016038.wav,Queens College clock striking five o'clock.,36,,EC36D,"Queens College Clock, Oxford",8,5,10.0
+07016037.wav,Queens College clock striking four o'clock.,33,,EC36D,"Queens College Clock, Oxford",7,4,10.0
+07016036.wav,Queens College clock striking three o'clock.,31,,EC36D,"Queens College Clock, Oxford",6,3,10.0
+07016035.wav,Queens College clock striking two o'clock.,28,,EC36D,"Queens College Clock, Oxford",5,2,10.0
+07016034.wav,Queens College clock striking one o'clock.,25,,EC36D,"Queens College Clock, Oxford",4,1,10.0
+07016033.wav,Queens College clock striking quarter to the hour.,15,,EC36D,"Queens College Clock, Oxford",3,6,0.0
+07016032.wav,Queens College clock striking half past the hour.,12,,EC36D,"Queens College Clock, Oxford",2,4,0.0
+07016031.wav,Queens College clock striking quarter past the hour.,9,,EC36D,"Queens College Clock, Oxford",1,2,0.0
+07016030.wav,Merton College clock striking twelve o'clock.,82,,EC36C,"Merton College Clock, Oxford",9,12,22.0
+07016029.wav,Merton College clock striking eleven o'clock.,78,,EC36C,"Merton College Clock, Oxford",8,11,22.0
+07016028.wav,Merton College clock striking ten o'clock.,71,,EC36C,"Merton College Clock, Oxford",7,10,22.0
+07016027.wav,Merton College clock striking nine o'clock.,68,,EC36C,"Merton College Clock, Oxford",6,9,22.0
+07016026.wav,Merton College clock striking eight o'clock.,66,,EC36C,"Merton College Clock, Oxford",5,8,22.0
+07016025.wav,Merton College clock striking seven o'clock.,65,,EC36C,"Merton College Clock, Oxford",4,7,22.0
+07016024.wav,Merton College clock striking six o'clock.,63,,EC36C,"Merton College Clock, Oxford",3,6,22.0
+07016023.wav,Merton College clock striking five o'clock.,58,,EC36C,"Merton College Clock, Oxford",2,5,22.0
+07016022.wav,Merton College clock striking four o'clock.,56,,EC36C,"Merton College Clock, Oxford",1,4,22.0
+07016021.wav,Merton College clock striking three o'clock.,54,,EC36B,"Merton College Clock, Oxford",10,3,22.0
+07016020.wav,Merton College clock striking two o'clock.,50,,EC36B,"Merton College Clock, Oxford",9,2,22.0
+07016019.wav,Merton College clock striking one o'clock.,48,,EC36B,"Merton College Clock, Oxford",8,1,22.0
+07016018.wav,Merton College clock striking quarter to the hour.,34,,EC36B,"Merton College Clock, Oxford",7,10,0.0
+07016017.wav,Merton College clock striking half past the hour.,27,,EC36B,"Merton College Clock, Oxford",6,7,0.0
+07016016.wav,Merton College clock striking quarter past the hour.,21,,EC36B,"Merton College Clock, Oxford",5,3,0.0
+07016015.wav,Magdalen College clock striking twelve o'clock.,62,,EC36B,"Merton College Clock, Oxford",4,12,10.0
+07016014.wav,Magdalen College clock striking eleven o'clock.,60,,EC36B,"Merton College Clock, Oxford",3,11,10.0
+07016013.wav,Magdalen College clock striking ten o'clock.,57,,EC36B,"Merton College Clock, Oxford",2,10,10.0
+07016012.wav,Magdalen College clock striking nine o'clock.,54,,EC36B,"Merton College Clock, Oxford",1,9,10.0
+07016011.wav,Magdalen College clock striking eight o'clock.,51,,EC36A,"Magdalen College Clock, Oxford",11,8,10.0
+07016010.wav,Magdalen College clock striking seven o'clock.,47,,EC36A,"Magdalen College Clock, Oxford",10,7,10.0
+07016009.wav,Magdalen College clock striking six o'clock.,44,,EC36A,"Magdalen College Clock, Oxford",9,6,10.0
+07016008.wav,Magdalen College clock striking five o'clock.,42,,EC36A,"Magdalen College Clock, Oxford",8,5,10.0
+07016007.wav,Magdalen College clock striking four o'clock.,40,,EC36A,"Magdalen College Clock, Oxford",7,4,10.0
+07016006.wav,Magdalen College clock striking three o'clock.,37,,EC36A,"Magdalen College Clock, Oxford",6,3,10.0
+07016005.wav,Magdalen College clock striking two o'clock.,35,,EC36A,"Magdalen College Clock, Oxford",5,2,10.0
+07016004.wav,Magdalen College clock striking one o'clock.,32,,EC36A,"Magdalen College Clock, Oxford",4,1,10.0
+07016003.wav,Magdalen College clock striking quarter to the hour.,22,,EC36A,"Magdalen College Clock, Oxford",3,6,0.0
+07016002.wav,Magdalen College clock striking half past the hour.,18,,EC36A,"Magdalen College Clock, Oxford",2,4,0.0
+07016001.wav,Magdalen College clock striking quarter past the hour.,17,,EC36A,"Magdalen College Clock, Oxford",1,2,0.0
+07002274.wav,"Church clock striking, 12 o'clock. (All Saints Church)",34,,EC105W,Outdoor Clock,12,12,0.0
+07002273.wav,"Church clock striking, 11 o'clock. (All Saints Church)",30,,EC105W,Outdoor Clock,11,11,0.0
+07002272.wav,"Church clock striking, 10 o'clock. (All Saints Church)",28,,EC105W,Outdoor Clock,10,10,0.0
+07002271.wav,"Church clock striking, 9 o'clock. (All Saints Church)",26,,EC105W,Outdoor Clock,9,9,0.0
+07002270.wav,"Church clock striking, 8 o'clock. (All Saints Church)",24,,EC105W,Outdoor Clock,8,8,0.0
+07002269.wav,"Church clock striking, 7 o'clock. (All Saints Church)",23,,EC105W,Outdoor Clock,7,7,0.0
+07002268.wav,"Church clock striking, 6 o'clock. (All Saints Church)",19,,EC105W,Outdoor Clock,6,6,0.0
+07002267.wav,"Church clock striking, 5 o'clock. (All Saints Church)",18,,EC105W,Outdoor Clock,5,5,0.0
+07002266.wav,"Church clock striking, 4 o'clock. (All Saints Church)",17,,EC105W,Outdoor Clock,4,4,0.0
+07002265.wav,"Church clock striking, 3 o'clock. (All Saints Church)",15,,EC105W,Outdoor Clock,3,3,0.0
+07002264.wav,"Church clock striking, 2 o'clock. (All Saints Church)",13,,EC105W,Outdoor Clock,2,2,0.0
+07002263.wav,"Church clock striking, 1 o'clock. (All Saints Church)",9,,EC105W,Outdoor Clock,1,1,0.0
+07002262.wav,"Church clock striking, 12 o'clock. (St. John the Evangelist)",30,,EC105V,Outdoor Clock,12,12,0.0
+07002261.wav,"Church clock striking, 11 o'clock. (St. John the Evangelist)",28,,EC105V,Outdoor Clock,11,11,0.0
+07002260.wav,"Church clock striking, 10 o'clock. (St. John the Evangelist)",25,,EC105V,Outdoor Clock,10,10,0.0
+07002259.wav,"Church clock striking, 9 o'clock. (St. John the Evangelist)",23,,EC105V,Outdoor Clock,9,9,0.0
+07002258.wav,"Church clock striking, 8 o'clock. (St. John the Evangelist)",21,,EC105V,Outdoor Clock,8,8,0.0
+07002257.wav,"Church clock striking, 7 o'clock. (St. John the Evangelist)",20,,EC105V,Outdoor Clock,7,7,0.0
+07002256.wav,"Church clock striking, 6 o'clock. (St. John the Evangelist)",17,,EC105V,Outdoor Clock,6,6,0.0
+07002255.wav,"Church clock striking, 5 o'clock. (St. John the Evangelist)",16,,EC105V,Outdoor Clock,5,5,0.0
+07002254.wav,"Church clock striking, 4 o'clock. (St. John the Evangelist)",15,,EC105V,Outdoor Clock,4,4,0.0
+07002253.wav,"Church clock striking, 3 o'clock. (St. John the Evangelist)",13,,EC105V,Outdoor Clock,3,3,0.0
+07002252.wav,"Church clock striking, 2 o'clock. (St. John the Evangelist)",12,,EC105V,Outdoor Clock,2,2,0.0
+07002251.wav,"Church clock striking, 1 o'clock. (St. John the Evangelist)",11,,EC105V,Outdoor Clock,1,1,0.0
+07002250.wav,Osterley House Clock striking 12 o'clock,36,,EC105T,Osterley House Clock,12,12,0.0
+07002249.wav,Osterley House Clock striking 11 o'clock,33,,EC105T,Osterley House Clock,11,11,0.0
+07002248.wav,Osterley House Clock striking 10 o'clock,30,,EC105T,Osterley House Clock,10,10,0.0
+07002247.wav,Osterley House Clock striking 9 o'clock,27,,EC105T,Osterley House Clock,9,9,0.0
+07002246.wav,Osterley House Clock striking 8 o'clock,25,,EC105T,Osterley House Clock,8,8,0.0
+07002245.wav,Osterley House Clock striking 7 o'clock,23,,EC105T,Osterley House Clock,7,7,0.0
+07002244.wav,Osterley House Clock striking 6 o'clock,20,,EC105T,Osterley House Clock,6,6,0.0
+07002243.wav,Osterley House Clock striking 5 o'clock,18,,EC105T,Osterley House Clock,5,5,0.0
+07002242.wav,Osterley House Clock striking 4 o'clock,16,,EC105T,Osterley House Clock,4,4,0.0
+07002241.wav,Osterley House Clock striking 3 o'clock,13,,EC105T,Osterley House Clock,3,3,0.0
+07002240.wav,Osterley House Clock striking 2 o'clock,11,,EC105T,Osterley House Clock,2,2,0.0
+07002239.wav,"Osterley House Clock striking, 1 o'clock",8,,EC105T,Osterley House Clock,1,1,0.0
+07002238.wav,Mechanism,205,,EC105S,"Anne Boleyn's Clock, Hampton Court",10,-1,0.0
+07002237.wav,"Anne Boleyn's Clock, chimes & 12 o'clock",56,,EC105S,"Anne Boleyn's Clock, Hampton Court",9,12,11.0
+07002236.wav,"Anne Boleyn's Clock, chimes & 11 o'clock",52,,EC105S,"Anne Boleyn's Clock, Hampton Court",8,11,11.0
+07002235.wav,"Anne Boleyn's Clock, chimes & 10 o'clock",47,,EC105S,"Anne Boleyn's Clock, Hampton Court",7,10,11.0
+07002234.wav,"Anne Boleyn's Clock, chimes & 9 o'clock",44,,EC105S,"Anne Boleyn's Clock, Hampton Court",6,9,11.0
+07002233.wav,"Anne Boleyn's Clock, chimes & 8 o'clock",43,,EC105S,"Anne Boleyn's Clock, Hampton Court",5,8,11.0
+07002232.wav,"Anne Boleyn's Clock, chimes & 7 o'clock",41,,EC105S,"Anne Boleyn's Clock, Hampton Court",4,7,11.0
+07002231.wav,"Anne Boleyn's Clock, chimes & 6 o'clock",37,,EC105S,"Anne Boleyn's Clock, Hampton Court",3,6,11.0
+07002230.wav,"Anne Boleyn's Clock, chimes & 5 o'clock",33,,EC105S,"Anne Boleyn's Clock, Hampton Court",2,5,11.0
+07002229.wav,"Anne Boleyn's Clock, chimes & 4 o'clock",33,,EC105S,"Anne Boleyn's Clock, Hampton Court",1,4,11.0
+07002228.wav,Anne Boleyn's Clock chimes & 3 o'clock,31,,EC105R,"Anne Boleyn's Clock, Hampton Court",10,3,11.0
+07002227.wav,Anne Boleyn's Clock chimes & 2 o'clock,27,,EC105R,"Anne Boleyn's Clock, Hampton Court",9,2,11.0
+07002226.wav,Anne Boleyn's Clock chimes & 1 o'clock,22,,EC105R,"Anne Boleyn's Clock, Hampton Court",8,1,11.0
+07002225.wav,Anne Boleyn's Clock striking three-quarters,20,,EC105R,"Anne Boleyn's Clock, Hampton Court",7,6,0.0
+07002224.wav,Anne Boleyn's Clock striking quarter-hour,17,,EC105R,"Anne Boleyn's Clock, Hampton Court",6,4,0.0
+07002223.wav,Anne Boleyn's Clock striking half-hour,16,,EC105R,"Anne Boleyn's Clock, Hampton Court",5,2,0.0
+07002222.wav,"Outdoor clock striking, 12 o'clock - SS. Peter & Paul",79,,EC105R,"Anne Boleyn's Clock, Hampton Court",4,12,22.0
+07002221.wav,"Outdoor clock striking, 11 o'clock - SS. Peter & Paul",73,,EC105R,"Anne Boleyn's Clock, Hampton Court",3,11,22.0
+07002220.wav,"Outdoor clock striking, 10 o'clock - SS. Peter & Paul",68,,EC105R,"Anne Boleyn's Clock, Hampton Court",2,10,22.0
+07002219.wav,"Outdoor clock striking, 9 o'clock - SS. Peter & Paul ",65,,EC105R,"Anne Boleyn's Clock, Hampton Court",1,9,22.0
+07002218.wav,"Outdoor clock striking, chimes & 8 o'clock  SS. Peter & Paul ",60,,EC105Q,Outdoor Clock,11,8,22.0
+07002217.wav,"Outdoor clock striking, chimes & 7 o'clock  SS. Peter & Paul ",58,,EC105Q,Outdoor Clock,10,7,22.0
+07002216.wav,"Outdoor clock striking, chimes & 6 o'clock  SS. Peter & Paul ",56,,EC105Q,Outdoor Clock,9,6,22.0
+07002215.wav,"Outdoor clock striking, chimes & 5 o'clock  SS. Peter & Paul ",54,,EC105Q,Outdoor Clock,8,5,22.0
+07002214.wav,"Outdoor clock striking, chimes & 4 o'clock  SS. Peter & Paul ",49,,EC105Q,Outdoor Clock,7,4,22.0
+07002213.wav,"Outdoor clock striking, chimes & 3 o'clock  SS. Peter & Paul ",46,,EC105Q,Outdoor Clock,6,3,22.0
+07002212.wav,"Outdoor clock striking, chimes & 2 o'clock  SS. Peter & Paul ",45,,EC105Q,Outdoor Clock,5,2,22.0
+07002211.wav,"Outdoor clock striking, chimes & 1 o'clock  SS. Peter & Paul ",39,,EC105Q,Outdoor Clock,4,1,22.0
+07002210.wav,"Outdoor clock striking, three-quarters - SS. Peter & Paul ",37,,EC105Q,Outdoor Clock,3,12,0.0
+07002209.wav,"Outdoor clock striking, half-hour - SS. Peter & Paul ",28,,EC105Q,Outdoor Clock,2,8,0.0
+07002208.wav,"Outdoor clock striking, quarter-hour - SS. Peter & Paul ",27,,EC105Q,Outdoor Clock,1,4,0.0
+07002207.wav,"Outdoor clock striking, 12 o'clock St. Mary's Church",47,,EC105P,Outdoor Clock,12,12,0.0
+07002206.wav,"Outdoor clock striking, 11 o'clock St. Mary's Church",43,,EC105P,Outdoor Clock,11,11,0.0
+07002205.wav,"Outdoor clock striking, 10 o'clock St. Mary's Church",41,,EC105P,Outdoor Clock,10,10,0.0
+07002204.wav,"Outdoor clock striking, 9 o'clock St. Mary's Church",38,,EC105P,Outdoor Clock,9,9,0.0
+07002203.wav,"Outdoor clock striking, 8 o'clock St. Mary's Church",36,,EC105P,Outdoor Clock,8,8,0.0
+07002202.wav,"Outdoor clock striking, 7 o'clock St. Mary's Church",32,,EC105P,Outdoor Clock,7,7,0.0
+07002201.wav,"Outdoor clock striking, 6 o'clock St. Mary's Church",28,,EC105P,Outdoor Clock,6,6,0.0
+07002200.wav,"Outdoor clock striking, 5 o'clock St. Mary's Church",26,,EC105P,Outdoor Clock,5,5,0.0
+07002199.wav,"Outdoor clock striking, 4 o'clock St. Mary's Church",25,,EC105P,Outdoor Clock,4,4,0.0
+07002198.wav,"Outdoor clock striking, 3 o'clock St. Mary's Church",21,,EC105P,Outdoor Clock,3,3,0.0
+07002197.wav,"Outdoor clock striking, 2 o'clock St. Mary's Church",21,,EC105P,Outdoor Clock,2,2,0.0
+07002196.wav,"Outdoor clock striking, 1 o'clock St. Mary's Church",16,,EC105P,Outdoor Clock,1,1,0.0
+07002195.wav,"Outdoor clock striking, 12 o'clock",31,,EC105N,Outdoor Clock,12,12,0.0
+07002194.wav,"Outdoor clock striking, 11 o'clock",28,,EC105N,Outdoor Clock,11,11,0.0
+07002193.wav,"Outdoor clock striking, 10 o'clock",26,,EC105N,Outdoor Clock,10,10,0.0
+07002192.wav,"Outdoor clock striking, 9 o'clock",26,,EC105N,Outdoor Clock,9,9,0.0
+07002191.wav,"Outdoor clock striking, 8 o'clock",24,,EC105N,Outdoor Clock,8,8,0.0
+07002190.wav,"Outdoor clock striking, 7 o'clock",23,,EC105N,Outdoor Clock,7,7,0.0
+07002189.wav,"Outdoor clock striking, 6 o'clock",21,,EC105N,Outdoor Clock,6,6,0.0
+07002188.wav,"Outdoor clock striking, 5 o'clock",18,,EC105N,Outdoor Clock,5,5,0.0
+07002187.wav,"Outdoor clock striking, 4 o'clock",18,,EC105N,Outdoor Clock,4,4,0.0
+07002186.wav,"Outdoor clock striking, 3 o'clock",16,,EC105N,Outdoor Clock,3,3,0.0
+07002185.wav,"Outdoor clock striking, 2 o'clock",15,,EC105N,Outdoor Clock,2,2,0.0
+07002184.wav,"Outdoor clock striking, 1 o'clock",13,,EC105N,Outdoor Clock,1,1,0.0
+07002178.wav,Great Tom clock with street atmosphere,184,,EC105H,St. Paul’S Cathedral Clock (Great Tom),9,-1,0.0
+07002177.wav,Great Tom clock with street atmosphere striking 12 o'clock,79,,EC105H,St. Paul’S Cathedral Clock (Great Tom),8,12,15.0
+07002176.wav,Great Tom clock with street atmosphere striking three-quarters,35,,EC105H,St. Paul’S Cathedral Clock (Great Tom),7,6,0.0
+07002175.wav,Great Tom clock with street atmosphere striking half-hour.,34,,EC105H,St. Paul’S Cathedral Clock (Great Tom),6,4,0.0
+07002174.wav,Great Tom clock with street atmosphere striking quarter-hour,34,,EC105H,St. Paul’S Cathedral Clock (Great Tom),5,2,0.0
+07002173.wav,Great Tom clock striking 12 o'clock,80,,EC105H,St. Paul’S Cathedral Clock (Great Tom),4,12,12.0
+07002172.wav,Great Tom clock striking 11 o'clock,75,,EC105H,St. Paul’S Cathedral Clock (Great Tom),3,11,12.0
+07002171.wav,Great Tom clock striking 10 o'clock,70,,EC105H,St. Paul’S Cathedral Clock (Great Tom),2,10,12.0
+07002170.wav,Great Tom clock striking 9 o'clock,68,,EC105H,St. Paul’S Cathedral Clock (Great Tom),1,9,12.0
+07002169.wav,Great Tom clock striking 8 o'clock,66,,EC105G,St. Paul’S Cathedral Clock (Great Tom),11,8,12.0
+07002168.wav,Great Tom clock striking 7 o'clock,60,,EC105G,St. Paul’S Cathedral Clock (Great Tom),10,7,12.0
+07002167.wav,Great Tom clock striking 6 o'clock,57,,EC105G,St. Paul’S Cathedral Clock (Great Tom),9,6,12.0
+07002166.wav,Great Tom clock striking 5 o'clock,53,,EC105G,St. Paul’S Cathedral Clock (Great Tom),8,5,12.0
+07002165.wav,Great Tom clock striking 4 o'clock,51,,EC105G,St. Paul’S Cathedral Clock (Great Tom),7,4,12.0
+07002164.wav,Great Tom clock striking 3 o'clock,47,,EC105G,St. Paul’S Cathedral Clock (Great Tom),6,3,12.0
+07002163.wav,Great Tom clock striking 2 o'clock,44,,EC105G,St. Paul’S Cathedral Clock (Great Tom),5,2,12.0
+07002162.wav,Great Tom clock striking 1 o'clock,42,,EC105G,St. Paul’S Cathedral Clock (Great Tom),4,1,12.0
+07002161.wav,Great Tom clock striking three-quarters,30,,EC105G,St. Paul’S Cathedral Clock (Great Tom),3,6,0.0
+07002160.wav,Great Tom clock striking half-hour,27,,EC105G,St. Paul’S Cathedral Clock (Great Tom),2,4,0.0
+07002159.wav,Great Tom clock striking quarter-hour,25,,EC105G,St. Paul’S Cathedral Clock (Great Tom),1,2,0.0
+07002138.wav,Sound of Big Ben ticking.,186,,EC105B,Time Signals & Clocks,8,-1,0.0
+07002137.wav,"Sound of Big Ben chiming and striking 12 o'clock, recorded prior to repair in 1956. (Inside clock tower)",87,,EC105B,Time Signals & Clocks,7,12,23.0
+07002136.wav,"Greenwich Time Signal, pips",9,,EC105B,Time Signals & Clocks,6,6,0.0
+07002135.wav,"Greenwich Time Signal, pips",9,,EC105B,Time Signals & Clocks,5,6,0.0
+07002134.wav,Big Ben recorded prior to repair in 1956. 12 o'clock,85,,EC105B,Time Signals & Clocks,4,12,19.0
+07002133.wav,Big Ben recorded prior to repair in 1956. 11 o'clock,79,,EC105B,Time Signals & Clocks,3,11,19.0
+07002132.wav,Big Ben recorded prior to repair in 1956. 10 o'clock,74,,EC105B,Time Signals & Clocks,2,10,19.0
+07002131.wav,Big Ben recorded prior to repair in 1956. 9 o'clock,71,,EC105B,Time Signals & Clocks,1,9,19.0
