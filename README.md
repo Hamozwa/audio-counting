@@ -12,11 +12,7 @@ Counting repeated sounds in an audio waveform: a clock striking, hammer blows, a
 - [Overview](#overview)
 - [Repository Structure](#repository-structure)
 - [Setup](#setup)
-- [Data Format](#data-format)
-- [Usage](#usage)
-- [Examples](#examples)
 - [Citation](#citation)
-- [Acknowledgements](#acknowledgements)
 
 ## Abstract
 
@@ -75,7 +71,3 @@ DINO weights are pulled automatically via `torch.hub` (`facebookresearch/dino`).
   year    = {}
 }
 ```
-
-## Acknowledgements
-
-4th Year Project (4YP), Department of Engineering Science, University of Oxford.
