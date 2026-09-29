@@ -4,7 +4,7 @@ Counting repeated sounds in an audio waveform: a clock striking, hammer blows, a
 
 ![DualCounter architecture](assets/DualCounter.png)
 
-**[Paper](#)** &nbsp;·&nbsp; **[Project Page](#)** &nbsp;·&nbsp; **[Demo](#)** &nbsp;·&nbsp; **[Dataset](#)** &nbsp;·&nbsp; **[Pretrained Models](#)**
+**[Paper](#)** &nbsp;·&nbsp; **[Demo](https://huggingface.co/spaces/Hamozwa/dualcounter)** &nbsp;·&nbsp; **[Synthetic Datasets](https://huggingface.co/datasets/Hamozwa/RepeatSynth)** &nbsp;·&nbsp; **[Real Datasets](https://huggingface.co/datasets/Hamozwa/RepeatReal)** &nbsp;·&nbsp; **[Pretrained Models](https://huggingface.co/Hamozwa/DualCounter)**
 
 ## Contents
 
