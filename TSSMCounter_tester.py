@@ -184,15 +184,17 @@ def test_dino_model(model_name, test_set_path):
     vit8 = torch.hub.load('facebookresearch/dino:main', 'dino_vits8')
     model = DinoFullWithClassifier(vit8, num_classes=9).to(device)
     
-    load_path = f"/users/hani/AudioCounting/models/{model_name}/model_{model_name}.pth"
+    load_path = f"./checkpoints/{model_name}/model_{model_name}.pth"
     model.load_state_dict(torch.load(load_path, map_location=device))
     model.eval()
 
     #get test loader
-    csv_test_sets = {"/scratch/local/hdd/hani/bbc_clocks/audio/": "/users/hani/AudioCounting/preprocessing/bbc_clocks/bbc_clocks.csv"
-                     , "/scratch/local/hdd/hani/heartbeats/wav/": "/users/hani/AudioCounting/preprocessing/heartbeats/heartbeats_sorted.csv"
-                     , "/scratch/local/hdd/hani/dolphins/test/": "/users/hani/AudioCounting/preprocessing/dolphins/dolphins.csv"
-                     , "/scratch/local/hdd/hani/dolphins/test_padded/": "/users/hani/AudioCounting/preprocessing/dolphins/dolphins.csv"}
+    csv_test_sets = {
+        "./data/clocks/wav/": "./data/clocks/bbc_clocks.csv",
+        "./data/heartbeats/wav/": "./data/heartbeats/heartbeats_sorted.csv",
+        "./data/dolphins/test/": "./data/dolphins/dolphins.csv",
+        "./data/dolphins/test_padded/": "./data/dolphins/dolphins.csv",
+    }
 
     csv_path = csv_test_sets.get(test_set_path, None)
 
@@ -236,7 +238,7 @@ def test_dino_model(model_name, test_set_path):
     print(f"Results: MAE: {mae:.4f} | OBO: {obo:.2f}% | Acc: {acc:.2f}%")
 
     # Save all results to the same results file
-    txt_path = "/users/hani/AudioCounting/results_new/TSSMCounter_results.txt"
+    txt_path = "./results/TSSMCounter_results.txt"
     with open(txt_path, "a") as f:
         f.write(f"\nModel: {model_name} | Dataset: {test_set_path}\n")
         f.write(f"{'MAE':<8}| {'Acc %':<8} | {'OBO %':<8}\n")
@@ -246,18 +248,18 @@ def test_dino_model(model_name, test_set_path):
 
 def test_model_on_all_sets(model_name):
     test_sets = [
-        '/scratch/local/ssd/hani/RS/tssm/test/',
-        '/scratch/local/ssd/hani/RSN/tssm/test/',
-        '/scratch/local/ssd/hani/RVN/tssm/test/',
-        '/scratch/local/hdd/hani/bbc_clocks/audio/',
-        '/scratch/local/hdd/hani/heartbeats/wav/',
-        '/scratch/local/hdd/hani/dolphins/test_padded/'
+        './data/bbc_clocks/wav/',
+        './data/heartbeats/wav/',
+        './data/dolphins/test_padded/',
+        './data/RS/wav/test/',
+        './data/RSN/wav/test/',
+        './data/RVN/wav/test/',
     ]
 
     for test_set in test_sets:
         test_dino_model(model_name, test_set)
 
-models = ['RS-C','RSN-C','RVN-C']
+models = ['tssm_checkpoint']
 
 for model in models:
     test_model_on_all_sets(model)
