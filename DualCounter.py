@@ -505,21 +505,21 @@ def get_heatmap_quality(heatmap):
 def test_combined(test_set_path, wav_model_name, tssm_model_name, csv_path, threshold=0.0640, txt_path = None):
 
     print(f"Testing with WAV model: {wav_model_name} and TSSM model: {tssm_model_name}")
-    output_dir = "/users/hani/AudioCounting/models/"
+    output_dir = "./checkpoints/"
 
     #WAVCOUNTER MODEL
 
-    if "LARGE" in wav_model_name:
-        w2v_version = 'large'
-    else:
-        w2v_version = 'base'
+    # if "LARGE" in wav_model_name:
+    #     w2v_version = 'large'
+    # else:
+    #     w2v_version = 'base'
 
-    if "NS" in wav_model_name:
-        use_sigmoid = False
-    else:
-        use_sigmoid = True
+    # if "NS" in wav_model_name:
+    #     use_sigmoid = False
+    # else:
+    #     use_sigmoid = True
 
-    wav_model = W2V_mlp(out_features=1, use_sigmoid=use_sigmoid, w2v_version=w2v_version)
+    wav_model = W2V_mlp(out_features=1, use_sigmoid=True, w2v_version='large')
     wav_model.load_state_dict(torch.load(os.path.join(output_dir, wav_model_name, f"model_{wav_model_name}.pth"), map_location=device))
     wav_model = wav_model.to(device)
     wav_model.eval()
@@ -528,7 +528,7 @@ def test_combined(test_set_path, wav_model_name, tssm_model_name, csv_path, thre
 
     vit8 = torch.hub.load('facebookresearch/dino:main', 'dino_vits8')
     tssm_model = DinoFullWithClassifier(vit8, num_classes=9).to(device)
-    load_path = f"/users/hani/AudioCounting/models/{tssm_model_name}/model_{tssm_model_name}.pth"
+    load_path = f"./checkpoints/{tssm_model_name}/model_{tssm_model_name}.pth"
     tssm_model.load_state_dict(torch.load(load_path, map_location=device))
     tssm_model.eval()
 
@@ -600,7 +600,7 @@ def test_combined(test_set_path, wav_model_name, tssm_model_name, csv_path, thre
     print(f"Number of TSSMCounter Trusts: {number_of_tssmcounter_trusts}")
 
     if txt_path is not None:
-        txt_path = os.path.join("/users/hani/AudioCounting/results/", txt_path)
+        txt_path = os.path.join("./checkpoints/results/", txt_path)
         with open(txt_path, "a") as f:
             f.write(f"\nResults for WAV model: {wav_model_name} and TSSM model: {tssm_model_name} on {test_set_path}\n")
             f.write(f"MAE: {mae:.4f} | Acc: {acc:.2f}% | OBO: {obo:.2f}%\n")
@@ -608,31 +608,27 @@ def test_combined(test_set_path, wav_model_name, tssm_model_name, csv_path, thre
             f.write(f"Number of TSSMCounter Trusts: {number_of_tssmcounter_trusts}\n")
 
 test_sets = [
-                '/scratch/local/ssd/hani/RS/wav/test/',
-                '/scratch/local/ssd/hani/RSN/wav/test/',
-                '/scratch/local/ssd/hani/RVN/wav/test/',
-                '/scratch/local/hdd/hani/dolphins/test_padded/',
-                '/scratch/local/hdd/hani/heartbeats/wav/',
-                '/scratch/local/hdd/hani/bbc_clocks/audio/'
-            ]
+        './data/bbc_clocks/wav/',
+        './data/heartbeats/wav/',
+        './data/dolphins/test_padded/',
+        './data/RS/wav/test/',
+        './data/RSN/wav/test/',
+        './data/RVN/wav/test/',
+    ]
 
 csv_paths = [
                 None,
                 None,
                 None,
-                "/users/hani/AudioCounting/preprocessing/dolphins/dolphins.csv",
-                "/users/hani/AudioCounting/preprocessing/heartbeats/heartbeats_sorted.csv",
-                "/users/hani/AudioCounting/preprocessing/bbc_clocks/bbc_clocks.csv"
+                "./data/dolphins/dolphins.csv",
+                "./data/heartbeats/heartbeats_sorted.csv",
+                "./data/clocks/bbc_clocks.csv"
             ]
 
-model_combinations = [
-                        # ("LARGE-RS-W2V-F", "RS-C"),
-                        # ("LARGE-RSN-W2V-F", "RSN-C"),
-                        ("LARGE-RVN-W2V-F", "RSN-C")
-                        ]
+model_combinations = [("wav_checkpoint", "tssm_checkpoint")]
 
 for (wav_model_name, tssm_model_name) in model_combinations:
-    log_file = f"/users/hani/AudioCounting/results_new/DUAL_{wav_model_name}_{tssm_model_name}.txt"
+    log_file = f"./data/dualcounter.txt"
     for test_set_path, csv_path in zip(test_sets, csv_paths):
         with open(log_file, "a") as f:
              f.write(f"Testing on {test_set_path} with CSV: {csv_path}\n")
