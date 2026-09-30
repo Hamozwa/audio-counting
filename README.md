@@ -63,7 +63,7 @@ pip install datasets soundfile tqdm huggingface_hub
 
 ### Checkpoints
 
-Required for both options below. A couple of GB.
+Required for both options below. ~2GB.
 
 ```bash
 hf download Hamozwa/DualCounter --local-dir ./checkpoints
@@ -71,7 +71,7 @@ hf download Hamozwa/DualCounter --local-dir ./checkpoints
 
 ### Option A: Real-world results (Clocks, Heartbeats, Dolphins)
 
-A few GB total.
+~6GB total.
 
 ```bash
 hf download Hamozwa/RepeatReal --repo-type dataset --local-dir ./data
@@ -83,9 +83,9 @@ python TSSMCounter_tester.py
 python DualCounter.py
 ```
 
-### Option B: Synthetic results too (RS, RSN, RVN)
+### Option B: Synthetic results (RS, RSN, RVN)
 
-Each subset is roughly 200GB, so testing all three means around 600GB downloaded, plus similar again for the reconstructed wav files — point the Hub cache and output folder at separate large volumes if possible.
+Each subset is roughly 200GB, so testing all three means around 600GB downloaded, plus similar again for the reconstructed wav files.
 
 ```bash
 export HF_HOME=/path/to/large/volume/hf_cache
