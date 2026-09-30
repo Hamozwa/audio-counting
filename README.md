@@ -11,7 +11,7 @@ Counting repeated sounds in an audio waveform: a clock striking, hammer blows, a
 - [Abstract](#abstract)
 - [Overview](#overview)
 - [Repository Structure](#repository-structure)
-- [Setup](#setup)
+- [Setup & Reproduction](#setup--reproduction)
 - [Citation](#citation)
 
 ## Abstract
@@ -49,16 +49,50 @@ audio-counting/
 └── requirements.txt
 ```
 
-## Setup
+## Setup & Reproduction
+
+### Install
 
 ```bash
 git clone https://github.com/Hamozwa/audio-counting.git
 cd audio-counting
 python -m venv venv && source venv/bin/activate
 pip install -r requirements.txt
+pip install datasets soundfile tqdm huggingface_hub
 ```
 
-DINO weights are pulled automatically via `torch.hub` (`facebookresearch/dino`). Pretrained checkpoints for WavCounter and TSSMCounter are available under [Pretrained Models](#), and a live demo is hosted on [Hugging Face Spaces](#).
+### Checkpoints
+
+Required for both options below. A couple of GB.
+
+```bash
+hf download Hamozwa/DualCounter --local-dir ./checkpoints
+```
+
+### Option A: Real-world results (Clocks, Heartbeats, Dolphins)
+
+A few GB total.
+
+```bash
+hf download Hamozwa/RepeatReal --repo-type dataset --local-dir ./data
+```
+
+```bash
+python WavCounter_tester.py
+python TSSMCounter_tester.py
+python DualCounter.py
+```
+
+### Option B: Synthetic results too (RS, RSN, RVN)
+
+Each subset is roughly 200GB, so testing all three means around 600GB downloaded, plus similar again for the reconstructed wav files — point the Hub cache and output folder at separate large volumes if possible.
+
+```bash
+export HF_HOME=/path/to/large/volume/hf_cache
+python reconstruct_from_hub.py
+```
+
+This rebuilds `RS/`, `RSN/`, and `RVN/` in the folder layout the test scripts expect. Run the same three commands from Option A once it finishes.
 
 
 ## Citation
