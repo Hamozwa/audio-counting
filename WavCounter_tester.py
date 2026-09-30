@@ -375,29 +375,33 @@ def get_heatmap_quality(heatmap):
 def test_model(model_name, test_set_name, txt_path, normalise=True, volume_shift=False, measure_mse=False):
     print(f"Testing model: {model_name} on test set: {test_set_name}")
 
-    use_sigmoid = 'NS' not in model_name
-    if 'LARGE' in model_name:
-        w2v_version = 'large'
-    else:
-        w2v_version = 'base'
+    # use_sigmoid = 'NS' not in model_name
+    # if 'LARGE' in model_name:
+    #     w2v_version = 'large'
+    # else:
+    #     w2v_version = 'base'
 
-    if "-F" in model_name:
-        model = W2V_mlp(out_features=1, use_sigmoid=use_sigmoid, w2v_version=w2v_version)
-    else:
-        model = transformer_blocks(in_features=768, out_features=1)
-    model.load_state_dict(torch.load(f"/users/hani/AudioCounting/models/{model_name}/model_{model_name}.pth", map_location="cpu", weights_only=True))
+    # if "-F" in model_name:
+    #     model = W2V_mlp(out_features=1, use_sigmoid=use_sigmoid, w2v_version=w2v_version)
+    # else:
+    #     model = transformer_blocks(in_features=768, out_features=1)
+    model = W2V_mlp(out_features=1, use_sigmoid=True, w2v_version='LARGE')
+    
+    model.load_state_dict(torch.load(f"./checkpoints/{model_name}/model_{model_name}.pth", map_location="cpu", weights_only=True))
     model.to(device)
     model.eval()
 
     #check if csv dataset
-    csv_test_sets = {"/scratch/local/hdd/hani/bbc_clocks/audio/": "/users/hani/AudioCounting/preprocessing/bbc_clocks/bbc_clocks.csv"
-                     , "/scratch/local/hdd/hani/heartbeats/wav/": "/users/hani/AudioCounting/preprocessing/heartbeats/heartbeats_sorted.csv"
-                     , "/scratch/local/hdd/hani/dolphins/test/": "/users/hani/AudioCounting/preprocessing/dolphins/dolphins.csv"
-                     , "/scratch/local/hdd/hani/dolphins/test_padded/": "/users/hani/AudioCounting/preprocessing/dolphins/dolphins.csv"}
+    csv_test_sets = {
+        "./data/clocks/wav/": "./data/clocks/bbc_clocks.csv",
+        "./data/heartbeats/wav/": "./data/heartbeats/heartbeats_sorted.csv",
+        "./data/dolphins/test/": "./data/dolphins/dolphins.csv",
+        "./data/dolphins/test_padded/": "./data/dolphins/dolphins.csv",
+    }
 
     csv_path = csv_test_sets.get(test_set_name, None)
 
-    if csv_path == "/users/hani/AudioCounting/preprocessing/bbc_clocks/bbc_clocks.csv":
+    if "clock" in test_set_name:
         cut_start = True
     else:
         cut_start = False
@@ -440,7 +444,7 @@ def test_model(model_name, test_set_name, txt_path, normalise=True, volume_shift
 
     if measure_mse:
         dataset_short_name = test_set_name.strip('/').split('/')[-3]
-        csv_log_path = f"/users/hani/AudioCounting/results/MSE_{model_name}_{dataset_short_name}.csv"
+        csv_log_path = f"./results/MSE_{model_name}_{dataset_short_name}.csv"
         
         csv_file = open(csv_log_path, mode='w', newline='')
         csv_writer = csv.writer(csv_file)
@@ -508,12 +512,12 @@ def test_model(model_name, test_set_name, txt_path, normalise=True, volume_shift
 
 def test_models_on_all_sets(models, except_RSN=False):
     test_sets = [
-        '/scratch/local/hdd/hani/bbc_clocks/audio/',
-        '/scratch/local/hdd/hani/heartbeats/wav/',
-        '/scratch/local/hdd/hani/dolphins/test_padded/',
-        '/scratch/local/ssd/hani/RS/wav/test/',
-        '/scratch/local/ssd/hani/RSN/wav/test/',
-        '/scratch/local/ssd/hani/RVN/wav/test/',
+        './data/bbc_clocks/wav/',
+        './data/heartbeats/wav/',
+        './data/dolphins/test_padded/',
+        './data/RS/wav/test/',
+        './data/RSN/wav/test/',
+        './data/RVN/wav/test/',
     ]
 
     if except_RSN:
@@ -521,16 +525,16 @@ def test_models_on_all_sets(models, except_RSN=False):
     
     for model_name in models:
 
-        if not os.path.exists(f"/users/hani/AudioCounting/models/{model_name}/model_{model_name}.pth"):
+        if not os.path.exists(f"./checkpoints/{model_name}/model_{model_name}.pth"):
             print(f"Model file not found for {model_name}")
             continue
 
-        normalise = "LARGE" in model_name
+        normalise = True
 
         if normalise:
-            txt_path = f"/users/hani/AudioCounting/results_new/{model_name}_n_results.txt"
+            txt_path = f"./results/{model_name}_n_results.txt"
         else:
-            txt_path = f"/users/hani/AudioCounting/results_new/{model_name}_results.txt"
+            txt_path = f"./results/{model_name}_results.txt"
 
         # if os.path.exists(txt_path):
         #     os.remove(txt_path)
@@ -538,6 +542,6 @@ def test_models_on_all_sets(models, except_RSN=False):
         for test_set in test_sets:
             test_model(model_name, test_set, txt_path, normalise=normalise)
 
-models = ["LARGE-RS-W2V-F", "LARGE-RSN-W2V-F", "LARGE-RVN-W2V-F"] #True WavCounter
+models = ["wav_checkpoint"]
 
 test_models_on_all_sets(models)
